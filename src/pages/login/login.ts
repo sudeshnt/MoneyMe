@@ -32,7 +32,8 @@ export class LoginPage {
         return this.afAuth.auth.getRedirectResult().then( result => {
           // This gives you a Google Access Token.
           // You can use it to access the Google API.
-          let token = result.credential.accessToken;
+          let token = result.credential;
+          // let token = result.credential.accessToken;
           // The signed-in user info.
           let user = result.user;
           console.log(token, user);
