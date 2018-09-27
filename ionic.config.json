@@ -1,0 +1,7 @@
+{
+  "name": "Money-Me",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
