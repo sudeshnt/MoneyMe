@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1042089685993",
+    "firebase_url": "https://moneyme-fd2ea.firebaseio.com",
+    "project_id": "moneyme-fd2ea",
+    "storage_bucket": "moneyme-fd2ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042089685993:android:67104dfe821e001f",
+        "android_client_info": {
+          "package_name": "com.mutants.moneyme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042089685993-qn1gmln5pr4t5piio2jlr91thk5e571n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATRUKo_Xqx1-pJENCRXcp9dJ4tXLOaBUk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
