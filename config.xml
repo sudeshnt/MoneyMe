@@ -80,7 +80,7 @@
     <universal-links>
         <host name="moneyme.page.link/iov4" scheme="https" />
         <host name="money-me.firebaseapp.com" scheme="https">
-            <path url="/__/auth/callback"/>
+            <path url="/__/auth/callback" />
         </host>
     </universal-links>
     <engine name="android" spec="7.0.0" />
@@ -98,4 +98,5 @@
     <plugin name="cordova-plugin-customurlscheme" spec="^4.3.0">
         <variable name="URL_SCHEME" value="com.mutants.moneymeiv4" />
     </plugin>
+    <plugin name="cordova-plugin-firebase" spec="^2.0.2" />
 </widget>
