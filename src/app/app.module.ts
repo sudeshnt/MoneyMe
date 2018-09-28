@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from "@ionic/storage";
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Firebase } from '@ionic-native/firebase';
+import { Badge } from '@ionic-native/badge';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -21,7 +24,8 @@ import { FcmProvider } from '../providers/fcm/fcm';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig.fire)
+    AngularFireModule.initializeApp(firebaseConfig.fire),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +38,8 @@ import { FcmProvider } from '../providers/fcm/fcm';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
     Firebase,
-    FcmProvider
+    FcmProvider,
+    Badge
   ]
 })
 export class AppModule {}

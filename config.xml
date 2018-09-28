@@ -99,4 +99,6 @@
         <variable name="URL_SCHEME" value="com.mutants.moneymeiv4" />
     </plugin>
     <plugin name="cordova-plugin-firebase" spec="^2.0.2" />
+    <plugin name="cordova-sqlite-storage" spec="^2.4.0" />
+    <plugin name="cordova-plugin-badge" spec="^0.8.7" />
 </widget>
