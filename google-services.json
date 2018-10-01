@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1042089685993:android:67104dfe821e001f",
+        "mobilesdk_app_id": "1:1042089685993:android:4d3ce131550160d9",
         "android_client_info": {
-          "package_name": "com.mutants.moneyme"
+          "package_name": "com.mutants.moneymeiv4"
         }
       },
       "oauth_client": [

@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1042089685993-03d1imeotk3gougnief35nf0oun3j5fo.apps.googleusercontent.com</string>
+	<string>1042089685993-e3tmo1in7o4k48jfqv4vsnuu0ml6k3nb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1042089685993-03d1imeotk3gougnief35nf0oun3j5fo</string>
+	<string>com.googleusercontent.apps.1042089685993-e3tmo1in7o4k48jfqv4vsnuu0ml6k3nb</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBIrdbvYwClqlipXZYI4RSiTT1EpVCaBX4</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mutants.moneyme</string>
+	<string>com.mutants.moneymeiv4</string>
 	<key>PROJECT_ID</key>
 	<string>moneyme-fd2ea</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1042089685993:ios:67104dfe821e001f</string>
+	<string>1:1042089685993:ios:4d3ce131550160d9</string>
 	<key>DATABASE_URL</key>
 	<string>https://moneyme-fd2ea.firebaseio.com</string>
 </dict>
