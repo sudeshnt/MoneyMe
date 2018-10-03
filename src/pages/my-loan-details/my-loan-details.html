@@ -1,18 +1,71 @@
-<!--
-  Generated template for the MyLoanDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<ion-title class="top-title">{{ "TITLE_LOAN_DETAILS" | translate }}</ion-title>
+<ion-header class="top-header">
   <ion-navbar>
-    <ion-title>my-loan-details</ion-title>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content class="pageBackground" padding *ngIf="loan">
+  <ion-list class="accordian-list">
+    <ion-item detail-none >
+      <div class="accordian-wrap">
+        <p ion-item>
+          <ion-icon hidden class="accordian-arrow" name="arrow-dropdown"></ion-icon>
+          {{ "LOAN" | translate }} {{loan.LoanNo}} ({{loan.status}})
+        </p>
+        <div class="accordian-details">
+          <table class="table-myLoans">
+            <tbody>
+            <tr>
+              <td>{{ "LOAN_AMOUNT" | translate }}</td>
+              <td>{{ "RS" | translate }} {{loan.RequestedAmount | number: '1.2-2' }}</td>
+            </tr>
+            <tr>
+              <td>{{ "PURPOSE_OF_LOAN" | translate }}</td>
+              <td>{{loan.RequestType}}</td>
+            </tr>
+            <!--<tr>-->
+            <!--<td>{{ "TYPE_OF_INCOME" | translate }}</td>-->
+            <!--<td>{{loan.IncomeType}}</td>-->
+            <!--</tr>-->
+            <tr>
+              <td>{{ "SENT_TO_BANKS" | translate }}</td>
+              <td>
+                <span *ngIf="loan.ShownToExternal">{{ "YES" | translate }}</span>
+                <span *ngIf="!loan.ShownToExternal">{{ "NO_NEED_ADDITIONAL" | translate }}</span>
+              </td>
+            </tr>
+            <!--Fields End-->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+  <p class="white">{{ SELECTED_OUT_OF }}</p>
+  <ion-list>
+    <ion-item *ngFor="let loanItem of loanItems; let i = index">
+      <ion-label>{{loanItem.Institution}} <span [hidden]="!loanItem.status">- {{loanItem.status}}</span></ion-label>
+      <ion-checkbox (ionChange)="selectInstitute($event, loanItem)" [checked]="loanItem.Id > 0" [disabled]="loanItem.Id > 0 ||
+                    (selectedList.length == systemParameters.MaxInstitute && selectedList.indexOf(loanItem) < 0)">
+        <!--[disabled]="selectedList.length == systemParameters.MaxInstitute && selectedList.indexOf(institute) < 0">-->
+      </ion-checkbox>
+      <ion-row>
+        <button ion-button item-end icon-end outline color="light">View</button>
+        <button ion-button item-end icon-end outline color="light">Edit</button>
+      </ion-row>
+    </ion-item>
+    <button class="btn-default-dbg" ion-button block type="submit" (click)="updateInstitutes()"
+            *ngIf="defaultSelectedCount < systemParameters.MaxInstitute && loanItems.length > defaultSelectedCount"
+            [disabled]="defaultSelectedCount >= selectedList.length">
+      {{"SUBMIT" | translate}}
+    </button>
+  </ion-list>
 </ion-content>

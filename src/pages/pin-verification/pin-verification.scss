@@ -1,3 +1,50 @@
 page-pin-verification {
+  .pin-input input{
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-size: 15px;
+    margin: 0 0 15px 0;
+    color: #fff;
+  }
 
+  .pin-input input{
+    text-align: center;
+  }
+
+  .step-messageP.step-pin-message{
+    margin-bottom: 0;
+    color: #f5f5f5;
+    font-size: 16px;
+  }
+
+  .resend-sms-text{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #fff;
+  }
+
+  .resend-sms-text button{
+    background-color: transparent;
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .menu-name,
+  .existingUser-Login{
+    margin-bottom: 0;
+  }
+
+  .existingUser-Login {
+    margin-top: 150px;
+    position: static;
+  }
+
+  /*.existingUser-Login span{
+    font-size: 16px;
+    margin-top: 5px;
+    display: block;
+  }*/
 }

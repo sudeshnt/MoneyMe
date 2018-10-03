@@ -1,5 +1,5 @@
-import { Component , ChangeDetectorRef } from '@angular/core';
-import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
+import { Component } from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import 'rxjs/add/operator/debounceTime';
 
@@ -7,7 +7,6 @@ import { AppConfig } from "../../config";
 
 import { PublicDataServiceProvider } from "../../providers/data-services/public-data-service/public-data-service";
 import { LocalDataServiceProvider } from "../../providers/local-data-service/local-data-service";
-import { TranslateService } from "@ngx-translate/core";
 import {UserProvider} from "../../providers/user/user";
 import {LoanDataServiceProvider} from "../../providers/data-services/loan-data-service/loan-data-service";
 import { PublicFunctionsProvider } from "../../providers/public-functions/public-functions";
@@ -25,9 +24,9 @@ export class FirstLoan_2Page {
     incomeTypes:any[] = [];
     requestTypes:any[] = [];
 
-    constructor(public navCtrl: NavController, public navParams: NavParams,private modalCtrl: ModalController,
+    constructor(public navCtrl: NavController, public navParams: NavParams,
                 private formBuilder: FormBuilder, private localDataService : LocalDataServiceProvider,
-                private translateService: TranslateService, private publicDataService : PublicDataServiceProvider, public userService : UserProvider,
+                private publicDataService : PublicDataServiceProvider, public userService : UserProvider,
                 private loanDataService: LoanDataServiceProvider, private publicFunctions : PublicFunctionsProvider) {
         this.initFirstLoanForm();
     }

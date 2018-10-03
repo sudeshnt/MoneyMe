@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component } from '@angular/core';
 import {AlertController, App, Config, Events, ModalController, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -11,7 +11,6 @@ import { FcmProvider } from "../providers/fcm/fcm";
 import { TranslateService } from "@ngx-translate/core";
 import {UserProvider} from "../providers/user/user";
 import {AppConfig} from "../config";
-import {Nav} from "ionic-angular/umd";
 import {LocalDataServiceProvider} from "../providers/local-data-service/local-data-service";
 import {AuthDataServiceProvider} from "../providers/data-services/auth-data-service/auth-data-service";
 import {PublicDataServiceProvider} from "../providers/data-services/public-data-service/public-data-service";
@@ -23,8 +22,6 @@ import {ProfileDataServiceProvider} from "../providers/data-services/profile-dat
 export class MyApp {
     rootPage:any;
     currentLang:string = "";
-
-    // @ViewChild(Nav) nav: Nav;
 
     constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private fcm: FcmProvider, private toastCtrl: ToastController,
             private app: App, private translate: TranslateService, private userService : UserProvider, private localDataService : LocalDataServiceProvider,
@@ -291,7 +288,7 @@ export class MyApp {
     async clearBadges(){
         try {
             let badge = await this.badge.clear();
-            // console.log(badge);
+            console.log(badge);
         }
         catch(e){
             console.error(e);

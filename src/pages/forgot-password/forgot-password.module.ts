@@ -11,5 +11,8 @@ import {TranslateModule} from "@ngx-translate/core";
     IonicPageModule.forChild(ForgotPasswordPage),
     TranslateModule.forChild()
   ],
+  exports: [
+      ForgotPasswordPage
+  ]
 })
 export class ForgotPasswordPageModule {}

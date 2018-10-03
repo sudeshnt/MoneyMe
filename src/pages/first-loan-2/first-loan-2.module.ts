@@ -5,11 +5,14 @@ import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
-    FirstLoan_2Page,
+    FirstLoan_2Page
   ],
   imports: [
     IonicPageModule.forChild(FirstLoan_2Page),
     TranslateModule.forChild()
   ],
+  exports: [
+      FirstLoan_2Page
+  ]
 })
 export class FirstLoan_2PageModule {}

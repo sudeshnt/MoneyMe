@@ -36,10 +36,10 @@ export class FcmProvider {
 
       // const devicesRef = this.afs.collection('devices');
 
-      const docData = {
-          token,
-          userId: 'testUser',
-      };
+      // const docData = {
+      //     token,
+      //     userId: 'testUser',
+      // };
 
       // return devicesRef.doc(token).set(docData)
   }

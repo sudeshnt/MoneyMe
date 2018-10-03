@@ -1,3 +1,19 @@
 page-my-loan-details {
+  .table-myLoans td:last-child{
+    padding: 5px 15px;
+    color:#222;
+    white-space: initial;
+  }
 
+  .table-myLoans td:first-child{
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 0;
+    color:#222;
+    vertical-align: top;
+  }
+
+  .white{
+    color: #fff;
+  }
 }

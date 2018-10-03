@@ -1,18 +1,55 @@
-<!--
-  Generated template for the PinVerificationPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<ion-title class="top-title">{{ "PIN_VERIFICATION" | translate }}</ion-title>
+<ion-header class="top-header">
   <ion-navbar>
-    <ion-title>pin-verification</ion-title>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="pageBackground" padding>
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col text-center>
+        <div class="step-message">
+          <p class="step-messageP step-pin-message">
+            {{ "ENTER_YOUR_PIN" | translate }}
+          </p>
+          <form [formGroup]="pinVerificationForm" (ngSubmit)="mobileVerification()">
+            <ion-input class="pin-input" type="number" formControlName="VerificationCode"></ion-input>
+            <span class="error-message" *ngIf="pinVerificationForm.get('VerificationCode').hasError('error_msg')">
+              {{pinVerificationForm.get('VerificationCode').getError('error_msg')}}
+            </span>
+            <button color="default1" ion-button type="submit" [disabled]="!pinVerificationForm.valid" class="btn-step-message btn-default-dbg">
+              {{ "LETS_CONTINUE" | translate }}
+            </button>
+          </form>
 
+          <div class="resend-sms-text">
+            {{ "DID_NT_RECEIVE_SMS" | translate }} <button (click)="resendMobileVerificationCode()">{{ "RESEND" | translate }}</button>
+          </div>
+          <span class="error-message green" *ngIf="pinResendSuccessMessage">{{'PIN_RESEND_SUCCESSFUL' | translate}}</span>
+          <span class="error-message" *ngIf="pinResendFailedMessage">{{'PIN_RESEND_UNSUCCESSFUL' | translate}}</span>
+
+        </div>
+        <div class="existingUser-Login" text-center>
+          <button>{{ "TROUBLESHOOT_GUIDE" | translate }}</button><br><br>
+          {{ "NEED_ASSISTANCE_?" | translate }}
+          <ion-grid>
+            <ion-row>
+              <ion-col no-padding text-center>
+                <a no-margin class="menu-icon" ion-button large outline icon-only round color="light" href="tel:{{systemTelephone}}"><ion-icon name="call"></ion-icon></a>
+                <p class="menu-name">{{ "CALL_US" | translate }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

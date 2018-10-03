@@ -1,18 +1,29 @@
-<!--
-  Generated template for the LanguagePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<ion-title class="top-title">{{ "LANGUAGE" | translate }}</ion-title>
+<ion-header class="top-header">
   <ion-navbar>
-    <ion-title>language</ion-title>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content class="pageBackground" padding>
+  <ion-list radio-group [(ngModel)]="currentLang" >
+    <ion-item>
+      <ion-label>{{languages.SINHALA.name}}</ion-label>
+      <ion-radio [value]="languages.SINHALA.code" (ionSelect)="changeLanguage(languages.SINHALA.code)"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{languages.ENGLISH.name}}</ion-label>
+      <ion-radio [value]="languages.ENGLISH.code" (ionSelect)="changeLanguage(languages.ENGLISH.code)"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{languages.TAMIL.name}}</ion-label>
+      <ion-radio [value]="languages.TAMIL.code" (ionSelect)="changeLanguage(languages.TAMIL.code)"></ion-radio>
+    </ion-item>
+  </ion-list>
 </ion-content>

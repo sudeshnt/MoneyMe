@@ -1,25 +1,31 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Events, IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the LanguagePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { TranslateService } from "@ngx-translate/core";
+
+import { Config } from "../../config";
 
 @IonicPage()
 @Component({
-  selector: 'page-language',
-  templateUrl: 'language.html',
+    selector: 'page-language',
+    templateUrl: 'language.html',
 })
 export class LanguagePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    currentLang : String;
+    languages : any;
+    config = Config;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LanguagePage');
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams, private translateService : TranslateService,
+                public events: Events) {
+        this.languages = this.config.LANGUAGES;
+        this.currentLang = this.translateService.currentLang;
+    }
+
+    ionViewDidLoad() {}
+
+    changeLanguage(languageCode){
+        this.events.publish('lang:changed', languageCode);
+    }
 
 }

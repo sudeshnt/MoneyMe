@@ -71,7 +71,7 @@ export class MenuPage {
             let hasPermission = await this.badge.hasPermission();
             this.setBadges(data);
             if (!hasPermission) {
-                let permission = await this.badge.requestPermission();
+                await this.badge.requestPermission();
                 this.setBadges(data);
             }
         } catch (e) {
@@ -81,7 +81,7 @@ export class MenuPage {
 
     async setBadges(badgeNumber: number) {
         try {
-            let badges = await this.badge.set(badgeNumber);
+            await this.badge.set(badgeNumber);
             // console.log(badges);
         } catch (e) {
             console.error(e);

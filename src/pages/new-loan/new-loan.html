@@ -1,18 +1,68 @@
-<!--
-  Generated template for the NewLoanPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<ion-title class="top-title">{{ "NEW_LOAN" | translate }}</ion-title>
+<ion-header class="top-header">
   <ion-navbar>
-    <ion-title>new-loan</ion-title>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="pageBackground" padding>
+  <div class="step-message request-form">
+    <form [formGroup]="newLoanForm" (ngSubmit)="requestNewLoan()">
+      <ion-list>
+        <ion-item class="custom-item">
+          <ion-label stacked>{{ "CURRENT_SALARY" | translate }}</ion-label>
+        </ion-item>
+        <span class="custom-input">{{ "RS" | translate }} {{profile.Salary | number: '1.2-2' }}</span>
+        <span class="error-message" *ngIf="newLoanFormErrors.salary">{{newLoanFormErrors.salary}}</span>
 
+        <ion-item class="company-auto-complete-item custom-item">
+          <ion-label stacked>{{ "YOUR_COMPANY" | translate }}</ion-label>
+        </ion-item>
+        <span class="custom-input" type="number">{{profile.CompanyName}}</span>
+
+        <ion-item [hidden]="!(min>0 && max>0)">
+          <ion-label stacked>{{ "HOW_MUCH_CASH_DO_YOU_NEED" | translate }}</ion-label>
+          <ion-badge item-end>{{ newLoanForm.get('cash').value }}</ion-badge>
+          <ion-range [min]="min" [max]="max" [step]="step" [pin]="true" [formControlName]="'cash'">
+            <ion-label range-left small>{{min}}</ion-label>
+            <ion-label range-right>{{max}}</ion-label>
+          </ion-range>
+        </ion-item>
+        <span class="error-message" *ngIf="newLoanForm.get('cash').hasError('error_msg')">{{newLoanForm.get('cash').getError('error_msg')}}</span>
+
+        <ion-item>
+          <ion-label stacked>{{ "DATE_OF_YOUR_SALARY" | translate }}</ion-label>
+          <ion-select [formControlName]="'salaryDate'" interface="popover">
+            <ion-option *ngFor="let day of daysOfMonth" [value]="day" >{{day}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <span class="error-message" *ngIf="newLoanForm.get('salaryDate').hasError('error_msg')">{{newLoanForm.get('salaryDate').getError('error_msg')}}</span>
+      </ion-list>
+
+      <span class="error-message" *ngIf="newLoanForm.hasError('error_msg')">{{newLoanForm.getError('error_msg')}}</span>
+
+      <div class="top-fix">
+        <ion-card>
+          <ion-card-content>
+            <p class="payback-details" [hidden]="!loanValuesSuccess">
+              {{ "YOU_ARE_EXPECTED_TO_PAYBACK" | translate }} <br>
+              <span>Rs.{{dueAmount | number: '1.2-2' }}</span> on <span>{{dueDate | date:"yyyy-MM-dd" }}</span>
+            </p>
+            <button color="default1" class="btn-default" ion-button type="submit" [disabled]="!newLoanForm.valid">
+              {{ "YES_LETS_DO_THIS" | translate }}
+            </button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </form>
+
+  </div>
 </ion-content>

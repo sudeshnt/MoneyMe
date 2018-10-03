@@ -1,3 +1,31 @@
 page-my-account {
 
+  .table-accountDetails {
+    width: 100%;
+  }
+
+  .table-accountDetails td:first-child{
+    display: table;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .table-accountDetails td:last-child{
+    display: table;
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+  }
+
+  .btn-default-dbg{
+    margin: 0 0 15px 0;
+    width: 100%;
+  }
+
 }

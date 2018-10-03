@@ -1,3 +1,43 @@
 page-notifications {
+  .accordian-details h5{
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0;
+  }
 
+  .accordian-details h6{
+    font-size: 11px;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+  .accordian-details p{
+    font-size: 14px;
+    color: #333;
+    white-space: normal;
+  }
+
+  .list .item .item-inner .accordian-wrap .label{
+    color: #e0e0e0;
+    font-weight: 400;
+  }
+
+  .list .item .item-inner .accordian-wrap.new-notification .label{
+    color: #fff !important;
+    font-weight: 900 !important;
+  }
+
+  .ios, .md {
+
+    page-home {
+
+      button {
+        align-items: baseline;
+      }
+
+    }
+
+  }
 }

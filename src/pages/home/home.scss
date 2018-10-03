@@ -1,3 +1,26 @@
 page-home {
+  p.greeting-text{
+    color: #fff;
+    font-size: 24px;
+    margin-top: 0;
+    font-weight: 300;
+    margin-bottom: 35px;
+  }
 
+  .fixed-to-bottom{
+    color: #fff;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+  }
+
+  h3{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 80px;
+  }
 }

@@ -1,25 +1,45 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController } from "ionic-angular";
 
-/**
- * Generated class for the MyAccountPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProfileDataServiceProvider } from "../../providers/data-services/profile-data-service/profile-data-service";
+import { PublicFunctionsProvider } from "../../providers/public-functions/public-functions";
 
 @IonicPage()
 @Component({
-  selector: 'page-my-account',
-  templateUrl: 'my-account.html',
+    selector: 'page-my-account',
+    templateUrl: 'my-account.html',
 })
 export class MyAccountPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    profile:any = {};
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MyAccountPage');
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams , private profileDataService : ProfileDataServiceProvider,
+                public alertCtrl: AlertController, private publicFunctions : PublicFunctionsProvider ) {
+    }
+
+    ionViewDidLoad() {
+        this.initProfile();
+    }
+
+    showAlert() {
+        this.publicFunctions.getTranslation("EDIT_MY_PROFILE_MESSAGE").then((message : any) => {
+            let alert = this.alertCtrl.create({
+                title: 'Edit!',
+                message: message,
+                cssClass:'notification-alert',
+                buttons: ['Ok']
+            });
+            alert.present();
+        });
+    }
+
+    initProfile(){
+        this.profileDataService.getProfile().then((data)=>{
+            if(data){
+                this.profile = data;
+            }
+        })
+    }
 
 }
