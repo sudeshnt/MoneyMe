@@ -1,0 +1,45 @@
+page-menu {
+  .menu-icon{
+    height: 50px;
+    width: 50px;
+  }
+
+  .main-menu{
+    background-color: #263238;
+  }
+
+  .menu-name{
+    color: #fff;
+    margin-top: 0px;
+  }
+
+  .invisible{
+    visibility: hidden;
+  }
+
+  .notificationNumber{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    left: 50%;
+    top: 4px;
+    background-color: #f00;
+    z-index: 999;
+  }
+
+  .notificationNumber span{
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    font-weight: 700;
+  }
+
+}

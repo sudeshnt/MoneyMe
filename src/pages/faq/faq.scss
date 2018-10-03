@@ -1,0 +1,26 @@
+page-faq {
+  .table-faq td:first-child{
+    display: table;
+    color: #f0f0f0;
+    font-weight: 700;
+  }
+
+  .table-faq td:last-child{
+    display: table;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .table-faq td:first-child b,
+  .table-faq td:last-child b{
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .para-faq{
+    color: #f0f0f0;
+  }
+}

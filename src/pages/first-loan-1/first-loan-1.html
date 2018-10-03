@@ -1,0 +1,47 @@
+<ion-title class="top-title">{{ "MINI_LOAN" | translate }}</ion-title>
+<ion-header class="top-header">
+  <ion-navbar>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="pageBackground" padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <p class="language-change">
+          <button (click)="changeLanguage(languages.SINHALA.code)" [ngClass]="{'active': currentLang==languages.SINHALA.code}">
+            {{languages.SINHALA.name}}
+          </button> |
+          <button (click)="changeLanguage(languages.ENGLISH.code)" [ngClass]="{'active': currentLang==languages.ENGLISH.code}">
+            {{languages.ENGLISH.name}}
+          </button> |
+          <button (click)="changeLanguage(languages.TAMIL.code)" [ngClass]="{'active': currentLang==languages.TAMIL.code}">
+            {{languages.TAMIL.name}}
+          </button>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col text-center>
+        <div class="step-message">
+          <p class="step-messageP">
+            <span>{{ "CASH_EMERGENCY_MSG_LINE_1" | translate }}</span>
+            {{ "CASH_EMERGENCY_MSG_LINE_2" | translate }}
+          </p>
+
+          <button color="default1" ion-button (click)="proceed()" class="btn-step-message btn-default-dbg">
+            {{ "YES_I_NEED_CASH" | translate }}
+          </button>
+        </div>
+        <div class="existingUser-Login" text-center>{{ "ARE_YOU_AN_EXISTING_USER" | translate }} <button (click)="login()">{{ "LOGIN_HERE" | translate }}</button></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

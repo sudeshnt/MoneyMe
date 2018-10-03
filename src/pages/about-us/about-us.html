@@ -1,0 +1,16 @@
+<ion-title class="top-title">{{ "ABOUT_US" | translate }}</ion-title>
+<ion-header class="top-header">
+  <ion-navbar>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+<ion-content class="pageBackground" padding>
+  <p class="para-about" [innerHTML]="aboutUs">
+  </p>
+</ion-content>

@@ -14,3 +14,399 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.menu-button ion-icon{
+  padding: 0;
+}
+
+.menu-button{
+  height: auto;
+}
+
+.scroll-content{
+  margin-bottom:60px !important;
+}
+
+.pageBackground{
+  background-image: url("../assets/imgs/02.jpg");
+  background-size: cover;
+  background-position: center;
+  /*background-color: #f8f8f8;*/
+}
+
+.btn-default{
+  background: #FF5722;
+
+  color: #fff;
+  font-weight: 700;
+
+  -webkit-box-shadow: 1px 1px 5px #444;
+  -moz-box-shadow: 1px 1px 5px #444;
+  box-shadow: 1px 1px 5px #444;
+
+  text-transform: uppercase;
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.btn-default-dbg{
+  background: #FF5722;
+
+  color: #fff;
+  font-weight: 700;
+
+  -webkit-box-shadow: 1px 1px 5px #444;
+  -moz-box-shadow: 1px 1px 5px #444;
+  box-shadow: 1px 1px 5px #444;
+
+  text-transform: uppercase;
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/*Toolbar Sections Styles Start*/
+.toolbar-background{
+  background: #263238;
+  background: -moz-linear-gradient(top, #263238 0%, #212121 50%, #263238 100%);
+  background: -webkit-linear-gradient(top, #263238 0%,#212121 50%,#263238 100%);
+  background: linear-gradient(to bottom, #263238 0%,#212121 50%,#263238 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#263238', endColorstr='#263238',GradientType=0 );
+
+  /*background: #90a4ae;
+  background: -moz-linear-gradient(top, #90a4ae 0%, #607d8b 50%, #90a4ae 100%);
+  background: -webkit-linear-gradient(top, #90a4ae 0%,#607d8b 50%,#90a4ae 100%);
+  background: linear-gradient(to bottom, #90a4ae 0%,#607d8b 50%,#90a4ae 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90a4ae', endColorstr='#90a4ae',GradientType=0 );*/
+}
+
+.toolbar{
+  padding: 0;
+}
+
+.top-header .toolbar,
+.header .toolbar{
+  min-height: initial;
+}
+
+.top-logo{
+  width: 40px;
+  height: 40px;
+}
+
+.top-header .col{
+  padding: 0;
+}
+
+.top-header .grid{
+  padding: 0 5px;
+}
+
+.top-title .toolbar-title{
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  text-align: right;
+}
+
+.footer .toolbar-content{
+  padding: 5px;
+}
+/*Toolbar Sections Styles End*/
+
+/*Bottom Login Section Styles Start*/
+.existingUser-Login{
+  color: #fff;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+.existingUser-Login button{
+  background-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 3px;
+  font-size: 12px;
+  text-decoration: underline;
+}
+/*Bottom Login Section Styles End*/
+
+
+/*Collapsing Details Section Styles Start*/
+.accordian-list .item{
+  background-color: transparent;
+  padding: 0;
+  margin: 0 0 0 0;
+  min-height: initial;
+  border: none;
+}
+
+.accordian-list .item .item-inner{
+  padding: 0;
+  border: none;
+}
+
+.accordian-list .item .item-inner .input-wrapper{
+  margin: 0;
+}
+
+.accordian-list .item .item-inner .input-wrapper .label{
+  margin: 0;
+}
+
+.accordian-list .item .item-inner .input-wrapper .label .accordian-wrap > p{
+  margin: 0;
+  min-height: initial;
+  padding: 6px 15px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #607d8b;
+  border-bottom: none;
+
+  background: #90a4ae;
+  background: -moz-linear-gradient(top, #90a4ae 0%, #607d8b 100%);
+  background: -webkit-linear-gradient(top, #90a4ae 0%,#607d8b 100%);
+  background: linear-gradient(to bottom, #90a4ae 0%,#607d8b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90a4ae', endColorstr='#607d8b',GradientType=0 );
+}
+
+.accordian-list .item .item-inner .input-wrapper .label .accordian-wrap > p .input-wrapper{
+  margin: 0;
+}
+
+.accordian-list .item .item-inner .input-wrapper .label .accordian-wrap div.accordian-details{
+  background-color: #f5f5f5;
+  padding: 6px 15px;
+  font-size: 12px;
+  min-height: 100%;
+  border: 1px solid #888;
+  border-bottom: none;
+}
+
+.sample-pop-up-modal{
+  width: 100px;
+}
+
+.accordian-list div.expand-wrapper{
+  overflow-y: auto;
+}
+/*Collapsing Details Section Styles End*/
+
+.list{
+  margin-bottom: 10px;
+}
+
+.list .item{
+  background-color: transparent;
+  padding: 0;
+  border: none !important;
+}
+
+.list .item .item-inner{
+  padding: 0;
+  border: none;
+}
+
+.list .item .item-inner .label{
+  margin-right: 0;
+  color: #f5f5f5;
+}
+
+.list .item .item-inner .input input{
+  margin: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+p.greeting-text{
+  color: #fff;
+  font-size: 24px;
+  margin-top: 0;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+.fixed-to-bottom{
+  color: #fff;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+/*POPUP MODAL STYLES START*/
+.sample-pop-up-modal{
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 75vw;
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+.sample-pop-up-modal .toolbar-title{
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+
+.sample-pop-up-modal ion-title ion-icon{
+  font-size: 20px;
+}
+/*POPUP MODAL STYLES END*/
+
+.accordian-arrow{
+  color: #fff;
+  float: right;
+  margin-top: 2px;
+}
+
+
+.error-message{
+  font-size: 11px;
+  margin-bottom: 10px;
+  display: block;
+  color: #f00;
+}
+
+.error-message.green{
+  color: #0f0;
+}
+
+.list .item .item-inner{
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.infinite-loading-text {
+  color: #fff;
+}
+
+ion-spinner  {
+  width: 28px;
+  height: 28px;
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+.radio .radio-checked,
+.radio .radio-icon{
+  border-color: #fff;
+}
+
+.radio .radio-checked .radio-inner{
+  /*background-color: #fff;*/
+}
+
+
+.popover-content .list .item .item-inner .label{
+  color: #222;
+}
+
+.popover-content .list .item.item-radio-checked .item-inner ion-label,
+.list .item.item-radio-checked .item-inner ion-label{
+  color: #488aff;
+}
+
+.popover-content .list .item{
+  padding: 0 15px;
+}
+
+.popover-content .radio .radio-checked,
+.popover-content .radio .radio-icon{
+  border-color: #222;
+}
+
+.popover-content .radio .radio-checked{
+  border-color: #488aff;
+}
+
+.popover-content .radio .radio-checked .radio-inner{
+  /*background-color: #222;*/
+}
+
+
+.datetime .datetime-text{
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.select{
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.select .select-icon .select-icon-inner{
+  border-color: #fff;
+}
+
+.select .select-text{
+  min-height: 3rem;
+  line-height: 3rem;
+  display: block;
+}
+
+.toolbar-ios ion-title {
+  padding: 0;
+}
+
+.ion-page > .top-title.title{
+  position: absolute;
+  color: #fff;
+  z-index: 999;
+  left: 50%;
+  top: 13px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.ion-page > .top-title.title.title-ios{
+  top: 35px;
+}
+
+.back-button,
+.bar-button-default,
+.bar-button{
+  color: #fff;
+}
+
+
+.request-form .list .item .input input,
+.company-auto-complete .searchbar .searchbar-input,
+.select .select-text,
+.list .item .item-inner .input input,
+.datetime .datetime-text,
+.pin-input input{
+  color: #ccc !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.ion-page > .top-title.title.title-ios{
+  top: 13px;
+}

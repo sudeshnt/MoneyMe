@@ -1,0 +1,16 @@
+{
+  "MENU": "Menu",
+  "Menu Modal": "Menu Modal",
+  "Are you in a cash emergency?": "Are you in a cash emergency?",
+  "Yes I need cash !": "Yes I need cash Ta!",
+  "Yes let's do this": "Yes let's do this",
+  "Login with Facebook": "Login with Facebook",
+  "Login with Google": "Login with Google",
+  "Next" : "Next",
+
+  "CASH_EMERGENCY_MSG_LINE_1" : "Are You In A",
+  "CASH_EMERGENCY_MSG_LINE_2" : "Cash Emergency?",
+
+  "BANK_SELECTION_GREETING" : "Following Banks/Institutions are ready to help you.",
+  "BANK_SELECTION_INSTRUCTIONS": "Please select a maximum of upto [max_count] and minimum of upto [min_count] banks/institutions to reach out to you in the first round ?"
+}

@@ -1,0 +1,314 @@
+{
+
+    "--MESSAGES--":"",
+
+    "SalaryStatuses_Success" : "Success",
+    "SalaryStatuses_LessThanMinSalaryAmount" : "We are sorry your salary falls below the minimum salary requirements.",
+
+    "LoanAmountStatuses_Success" : "Success",
+    "LoanAmountStatuses_LessThanMinLoanAmount" : "Kindly note that the advance payments are subjected to a minimum of xxxx based on your current salary",
+    "LoanAmountStatuses_GreaterThanMaxLoanAmount" : "Kindly note that your advance payment is exceeding the maximum based on your current salary",
+    "LoanAmountStatuses_LessThanMinLoanPercentage" : "Kindly note that the advance payments are subjected to a minimum of xxxx based on your current salary",
+    "LoanAmountStatuses_GreaterThanMaxLoanPercentage" : "Kindly note that the advance payments are subjected to a maximum of xxxx based on your current salary",
+
+    "SalaryDayStatuses_Success" : "Success",
+    "SalaryDayStatuses_FewDaysToSalaryDay" : "You next salary is due in [days] days, we are unable to process the loan for few days",
+    "SalaryDayStatuses_FewDaysFastSalaryDay" : "As your latest salary was just received, please wait for [days] days before applying for a new loan",
+
+    "partner_company" : "Hurray, you are working for a company which has already partnered with us. You will enjoy great benefits ! and please tell your friends about this facility too.",
+
+    "ReferralStatuses_Success" : "Congratulations ! you are now entitled for beneficial rates. Kindly finish your loan and your friend too can collect the same benefits.",
+    "ReferralStatuses_InvalidCode" : "We are sorry, this is not a valid promo code. Please re-check the promo code you received.",
+
+    "DefaultResponseStatuses_Success" : "Success",
+    "DefaultResponseStatuses_DetailError" : "Detail Error",
+    "DefaultResponseStatuses_RecordAlreadyExist" : "Record Already Exists",
+    "DefaultResponseStatuses_CodeAlreadyExist" : "Code Already Exists",
+    "DefaultResponseStatuses_NameAlreadyExist" : "Name Already Exists",
+    "DefaultResponseStatuses_LoginNameAlreadyExist" : "Login Name Already Exists",
+    "DefaultResponseStatuses_IdentificationNoAlreadyExist" : "Identification No Already Exists",
+    "DefaultResponseStatuses_CurrentPasswordNotMatched" : "Current Password Is Not Correct",
+    "DefaultResponseStatuses_ConfirmPasswordNotMatched" : "Confirm Password Does Not Match With New password",
+    "DefaultResponseStatuses_ChangePasswordSameAsCurrent" : "New Password Is Same As Current Password",
+    "DefaultResponseStatuses_EmployeeNoAlreadyExist" : "Employee Number Already Exist",
+    "DefaultResponseStatuses_TotalPercentageValueMismatch" : "Total Percentage Value Mismatch",
+    "DefaultResponseStatuses_EmailAlreadyExist" : "Email Already Exists",
+    "DefaultResponseStatuses_VerificationCodeWrong" : "Verification Code Is Not Correct",
+    "DefaultResponseStatuses_Unknown" : "Unknown",
+
+    "AuthStatuses_Success" : "Success",
+    "AuthStatuses_WrongCredentials" : "Wrong Credentials",
+    "AuthStatuses_WrongPassword" : "Wrong Password",
+    "AuthStatuses_AccountLocked" : "Account Locked",
+    "AuthStatuses_AccountPending" : "Account Pending",
+    "AuthStatuses_AccountSuspended" : "Account Suspended",
+    "AuthStatuses_InvalidChannel" : "InvalidChannel",
+    "AuthStatuses_MobileValidationPending" : "Mobile Validation Is Pending",
+    "AuthStatuses_WrongAuthenticationOption" : "Wrong Authentication Option",
+    "AuthStatuses_DocumentUploadPending" : "Document Upload Is Pending",
+    "AuthStatuses_LoanSignatureInfoPending" : "Loan Signature Info Pending",
+    "AuthStatuses_Unknown" : "Unknown",
+
+    "GeneralStatuses_PENDING" : "Pending",
+    "GeneralStatuses_APPROVED" : "Approved",
+    "GeneralStatuses_SUSPENDED" : "Suspended",
+    "GeneralStatuses_LOKED" : "Locked",
+    "GeneralStatuses_CREATING" : "Creating",
+    "GeneralStatuses_PARTIALLY_COMPLETED" : "Partially Completed",
+    "GeneralStatuses_FAILED" : "Failed",
+    "GeneralStatuses_REQUESTED" : "Requested",
+    "GeneralStatuses_COMPLETED" : "Completed",
+    "GeneralStatuses_REJECTED" : "Rejected",
+    "GeneralStatuses_UPLOADED" : "Uploaded",
+    "GeneralStatuses_ELIGIBLE" : "Eligible",
+    "GeneralStatuses_VERIFIED" : "Verified",
+    "GeneralStatuses_IN_PROGRESS" : "In Progress",
+    "GeneralStatuses_SIGNED" : "Pending",
+    "GeneralStatuses_PARTIALLY_SETTLED" : "Pending",
+    "GeneralStatuses_SETTLED" : "Completed",
+    "GeneralStatuses_CLOSED" : "Completed",
+    "GeneralStatuses_ATTENDED" : "Attended",
+    "GeneralStatuses_CONVERSATION_STARTED" : "Conversation Started",
+    "GeneralStatuses_NOT_ELIGIBLE" : "Not Eligible",
+    "GeneralStatuses_SUCCESSFUL_APPLICATION" : "Successful Application",
+    "GeneralStatuses_CUSTOMER_NOT_INTERESTED" : "Customer Not Interested",
+    "GeneralStatuses_CUSTOMER_NOT_CONTACTABLE" : "Customer Not Contactable",
+
+    "GeneralStatuses_LOAN_APPROVED_MONEY_DEPOSITED" : "Excellent News! We have just sent your request to financial institutes",
+    "GeneralStatuses_LOAN_APPROVED_MONEY_NOT_DEPOSITED" : "Excellent News! We have just sent your request to financial institutes",
+    "GeneralStatuses_LOAN_REQUESTED" : "Looking to call you soon, Can’t wait to make you one of our loyal clients.",
+    "GeneralStatuses_LOAN_REJECTED" : "It seems we are unable to proceed with your request. But we will always be here for your next emergency.",
+    "GeneralStatuses_LOAN_IN_PROGRESS" : "Looking to call you soon, Can’t wait to make you one of our loyal clients.",
+    "GeneralStatuses_LOAN_SIGNED" : "Your loan is almost ready to deposit",
+    "GeneralStatuses_LOAN_PARTIALLY_SETTLED" : "Your loan is almost ready to deposit",
+    "GeneralStatuses_LOAN_SETTLED" : "Thank you for your payment. We’d love to help you even faster in your next loan.",
+    "GeneralStatuses_LOAN_CLOSED" : "Thank you for your payment. We’d love to help you even faster in your next loan.",
+
+    "LoanRequestStatuses_Success" : "Success",
+    "LoanRequestStatuses_PendingLoanExist" : "Pending Loan Exists",
+
+    "PIN_RESEND_SUCCESSFUL" : "pin resend successful",
+    "PIN_RESEND_UNSUCCESSFUL" : "pin resend unsuccessful",
+
+    "CHANGE_PASSWORD_SUCCESSFUL" : "change password successful",
+    "CHANGE_PASSWORD_UNSUCCESSFUL" : "change password unsuccessful",
+
+    "--COMMON ERRORS--":"",
+
+    "REQUIRED_ERROR" : "This Field is Required",
+    "FIELD_INVALID_ERROR" : "This Field is Invalid",
+    "INVALID_EMAIL" : "Enter a valid Email.",
+    "ACCOUNT_DOES_NOT_EXIST" : "Account does not exist.",
+    "CONFIRM_PASSWORD_MISMATCH" : "Confirm password doesn't match with password.",
+
+    "--COMMON--":"",
+
+    "MINI_LOAN" : "Money Me",
+    "BACK" : "Back",
+    "NEXT" : "Next",
+    "PASSWORD" : "Password",
+    "BACK_BUTTON_TEXT" : "Back",
+    "RS" : "Rs.",
+
+    "--MENU--":"",
+
+    "SIGN_IN" : "Sign In",
+    "SIGN_OUT" : "Sign Out",
+
+    "--FIRST LOAN 1--":"",
+
+    "CASH_EMERGENCY_MSG_LINE_1" : "Are you in need",
+    "CASH_EMERGENCY_MSG_LINE_2" : "of Cash ?",
+    "YES_I_NEED_CASH" : "Yes I need cash !",
+    "ARE_YOU_AN_EXISTING_USER" : "Are you an existing user?",
+    "LOGIN_HERE" : "Login Here",
+    "YES":"Yes",
+    "NO_NEED_ADDITIONAL":"No",
+
+    "--FIRST LOAN 2--" : "",
+
+    "CURRENT_SALARY" : "Current Salary",
+    "YOUR_COMPANY" : "Your Company",
+    "HOW_MUCH_CASH_DO_YOU_NEED" : "How much cash do you need?",
+    "DATE_OF_YOUR_SALARY" : "Date of your salary",
+    "ADD_A_PROMO_CODE" : "Add a Promo Code",
+    "PROMO_CODE" : "Promo Code",
+    "YOU_ARE_EXPECTED_TO_PAYBACK" : "You are expected to payback",
+    "YES_LETS_DO_THIS" : "Yes let's do this",
+
+    "PURPOSE_OF_YOUR_BORROWING" : "Purpose of your borrowing?",
+    "HOW_MUCH_YOU_WISH_TO_BORROW" : "How much do you wish to borrow?",
+    "TYPE_OF_INCOME" : "Type of income",
+    "MONTHLY_INCOME" : "Monthly income",
+    "SENT_TO_BANKS" : "Internally Processed",
+
+    "--LOGIN--" : "",
+
+    "LOGIN":"Login",
+    "USERNAME" : "Username",
+    "LOGIN_WITH_GOOGLE" : "Login with Google",
+    "LOGIN_WITH_FACEBOOK" : "Login with Facebook",
+    "NEW_TO_MINI_LOANS" : "New to Fast Loan?",
+    "REGISTER_HERE" : "Register Here",
+    "OR" : "OR",
+    "FORGOT_PASSWORD_?" : "forgot password ? ",
+
+    "--REGISTER--" : "",
+
+    "REGISTER":"Register",
+    "EMAIL":"Email",
+    "REENTER_PASSWORD" : "Re-enter Password",
+    "ID_NUMBER" : "ID Number",
+    "MOBILE_NUMBER" : "Mobile Number",
+    "FIRST_NAME" : "First Name",
+    "LAST_NAME" : "Last Name",
+    "DOB" : "Date of Birth",
+    "HOME_ADDRESS" : "Home Address",
+    "COMPANY_ADDRESS" : "Company Address",
+    "COMPANY_NAME" : "Company Name",
+    "I_AM_SRI_LANKAN" : "I'm a Sri Lankan",
+    "YEARS_OF_EXPERIENCE" : "Years of work/ Business experience",
+
+    "--PIN VERIFICATION--" : "",
+
+    "PIN_VERIFICATION":"Pin Verification",
+    "ENTER_YOUR_PIN" : "Enter Your Pin",
+    "LETS_CONTINUE" : "Let's Continue",
+    "DID_NT_RECEIVE_SMS" : "didn't receive a sms?",
+    "RESEND" : "Resend",
+    "TROUBLESHOOT_GUIDE" : "Troubleshoot Guide",
+    "NEED_ASSISTANCE_?" : "If you need any Assistance",
+    "CALL_US" : "Call Us",
+
+    "--DOCUMENT UPLOAD PENDING--" : "",
+
+    "DOCUMENT_UPLOAD_PENDING":"Document Upload Pending",
+    "HI" : "Hi",
+    "FEW_MORE_STEPS_TO_COMPLETE" : "Few more steps to complete your journey",
+    "KEEP_FOLLOWING_READY" : "Keep the following ready to take pictures",
+    "PASSPORT_OR_ID" : "Your passport or ID",
+    "BANK_STATEMENT" : "Last 3 months bank statement",
+    "UTILITY_BILL" : "Utility Bill with your name",
+
+    "--DOCUMENT UPLOAD--" : "",
+
+    "DOCUMENT_UPLOAD":"Document Upload",
+    "SAMPLE" : "Sample",
+    "UPLOAD_SELFIE" : "Upload a Selfie",
+    "UPLOAD_ID_OR_PASSPORT" : "Upload ID / Passport",
+    "UPLOAD_BANK_STATEMENT" : "Upload Bank Statement",
+    "UPLOAD_UTILITY_BILL" : "Upload a Utility Bill",
+    "ALL_DONE" : "All Done",
+
+    "--SETTING MEETUP--" : "",
+
+    "COLLECT_SIGNATURE":"Collect Signature",
+    "WE_WILL_COLLECT_SIGNATURE" : "When would you like for us to call you ?",
+    "WHERE_CAN_WE_MEET" : "Where can we meet you ?",
+    "WHEN_CAN_WE_MEET" : "When can we meet you ?",
+    "HOME" : "Home",
+    "COMPANY" : "Company",
+    "READY_FOR_THE_VISIT" : "Ready for the visit",
+    "DATE_AND_TIME" : "Date & Time",
+    "ASAP" : "ASAP",
+    "FLEXIBLE" : "Flexible",
+    "DATE" : "Date",
+    "TIME" : "Time",
+
+    "--HOME--" : "",
+
+    "NEW_LOAN":"New Loan",
+
+    "--MY ACCOUNT--" : "",
+
+    "MY_ACCOUNT":"My Account",
+    "BANK_NAME":"Bank Name",
+    "BRANCH_NAME" : "Branch Name",
+    "BANK_ACC_NAME" : "Bank Account Name",
+    "BANK_ACC_NO" : "Bank Account Number",
+    "EDIT" : "EDIT",
+
+    "--MY LOANS--" : "",
+
+    "MY_LOANS":"My Loans",
+    "LOAN":"Loan",
+    "LOAN_AMOUNT":"Loan Amount",
+    "LOAN_GRANTED_DATE" : "Loan Granted Date",
+    "SCHEDULED_DUE_DATE" : "Scheduled Due Date",
+    "AMOUNT_ON_SCHEDULED_DATE" : "Amount on Scheduled Date",
+    "ACTUAL_PAYMENT_DATE" : "Actual Payment Date",
+    "ACTUAL_PAYMENT_AMOUNT" : "Actual Payment Amount",
+    "EDIT_MY_PROFILE_MESSAGE" : "Kindly email/call customer support to amend your account details",
+    "PURPOSE_OF_LOAN" : "Purpose of loan",
+    "VIEW_DETAILS" : "View Details",
+    "SUBMIT_ADDITIONAL_DETAILS" : "Submit More Details",
+    "FILL_ADDITIONAL_DETAILS" : "Fill Additional Details",
+
+    "--CHANGE PASSWORD--" : "",
+
+    "CHANGE_PASSWORD":"Change Password",
+    "CURRENT_PASSWORD":"Current Password",
+    "NEW_PASSWORD":"New Password",
+    "CONFIRM_PASSWORD":"Confirm Password",
+
+    "--NOTIFICATIONS--" : "",
+
+    "NOTIFICATIONS":"Notifications",
+    "ALERT":"Alert",
+
+    "--LANGUAGE--" : "",
+
+    "LANGUAGE":"Language",
+
+    "--REFER A FRIEND--" : "",
+
+    "REFER_A_FRIEND":"Refer a Friend",
+    "REFER_BENEFIT":"Get Rs.[amount] off for you and your friend",
+    "YOUR_REF_CODE":"Your Reference Code",
+    "REF_PARTY":"Referred Party",
+    "REF_STATUS":"Reference Status",
+    "ACTIVATED_DATE":"Activated date",
+    "AMOUNT":"Amount",
+    "SHARE_REFERRAL_CODE_MESSAGE":"use my referral code for your first loan to get entitled for beneficial rates.",
+    "CLAIMED":"Claimed",
+    "NOT_CLAIMED":"Not Claimed",
+
+    "--ABOUT US--" : "",
+
+    "ABOUT_US":"About Us",
+
+    "--PROMO CODE--" : "",
+
+    "ENTER_PROMO_CODE":"Enter Promotion Code",
+    "APPLY":"Apply",
+
+    "--FORGOT PASSWORD--" : "",
+
+    "FORGOT_PASSWORD":"Forgot Password",
+    "ENTER_EMAIL_ADDRESS":"Enter Email Address",
+    "REQUEST_PASSWORD":"Request Password",
+    "FORGOT_PASSWORD_SUCCESS":"Your password has been reset.Please check your email for the new password.",
+
+    "--NEW LOAN--" : "",
+
+     "--FAQ--" : "",
+
+    "FAQ":"FAQ",
+
+    "END" : "END",
+
+    "BANK_SELECTION_TITLE" : "Bank Selection",
+    "BANK_SELECTION_GREETING" : "Following Banks/Institutions are ready to help you.",
+    "BANK_SELECTION_INSTRUCTIONS" : "Please select a maximum of upto [max_count] and minimum of upto [min_count] banks/institutions to reach out to you in the first round ?",
+
+    "DATA_COLLECTION_STATUS": "We are ready to send your details",
+    "DATA_COLLECTION_FORM_INSTRUCTIONS" : "Please fill in the following",
+    "EXISTING_LOANS" : "What are your existing loans?",
+    "MONTHLY_COMMITMENTS" : "What are your monthly commitments?",
+    "HOME_ADDRESS_CHECK" : "What is your Home Address?",
+    "GET_BANKS_TO_CALL" : "Get Banks to Call Me",
+    "UPDATE_YOUR_DETAILS" : "Update Your Details",
+
+    "SELECTED_OUT_OF" : "You have selected [selected_count] out of [max_count] institutes",
+    "TITLE_LOAN_DETAILS" : "Loan Details"
+}

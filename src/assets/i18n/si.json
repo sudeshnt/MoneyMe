@@ -1,0 +1,277 @@
+{
+
+  "--MESSAGES--":"",
+
+  "SalaryStatuses_Success" : "Success",
+  "SalaryStatuses_LessThanMinSalaryAmount" : "We are sorry your salary falls below the minimum salary requirements.",
+
+  "LoanAmountStatuses_Success" : "Success",
+  "LoanAmountStatuses_LessThanMinLoanAmount" : "Kindly note that the advance payments are subjected to a minimum of xxxx based on your current salary",
+  "LoanAmountStatuses_GreaterThanMaxLoanAmount" : "Kindly note that your advance payment is exceeding the maximum based on your current salary",
+  "LoanAmountStatuses_LessThanMinLoanPercentage" : "Kindly note that the advance payments are subjected to a minimum of xxxx based on your current salary",
+  "LoanAmountStatuses_GreaterThanMaxLoanPercentage" : "Kindly note that the advance payments are subjected to a maximum of xxxx based on your current salary",
+
+  "SalaryDayStatuses_Success" : "Success",
+  "SalaryDayStatuses_FewDaysToSalaryDay" : "You next salary is due in [days] days, we are unable to process the loan for few days",
+  "SalaryDayStatuses_FewDaysFastSalaryDay" : "As your latest salary was just received, please wait for [days] days before applying for a new loan",
+
+  "partner_company" : "Hurray, you are working for a company which has already partnered with us. You will enjoy great benefits ! and please tell your friends about this facility too.",
+
+  "ReferralStatuses_Success" : "Congratulations ! you are now entitled for beneficial rates. Kindly finish your loan and your friend too can collect the same benefits.",
+  "ReferralStatuses_InvalidCode" : "We are sorry, this is not a valid promo code. Please re-check the promo code you received.",
+
+  "DefaultResponseStatuses_Success" : "Success",
+  "DefaultResponseStatuses_DetailError" : "Detail Error",
+  "DefaultResponseStatuses_RecordAlreadyExist" : "Record Already Exists",
+  "DefaultResponseStatuses_CodeAlreadyExist" : "Code Already Exists",
+  "DefaultResponseStatuses_NameAlreadyExist" : "Name Already Exists",
+  "DefaultResponseStatuses_LoginNameAlreadyExist" : "Login Name Already Exists",
+  "DefaultResponseStatuses_IdentificationNoAlreadyExist" : "Identification No Already Exists",
+  "DefaultResponseStatuses_CurrentPasswordNotMatched" : "Current Password Is Not Correct",
+  "DefaultResponseStatuses_ConfirmPasswordNotMatched" : "Confirm Password Does Not Match With New password",
+  "DefaultResponseStatuses_ChangePasswordSameAsCurrent" : "New Password Is Same As Current Password",
+  "DefaultResponseStatuses_EmployeeNoAlreadyExist" : "Employee Number Already Exist",
+  "DefaultResponseStatuses_TotalPercentageValueMismatch" : "Total Percentage Value Mismatch",
+  "DefaultResponseStatuses_EmailAlreadyExist" : "Email Already Exists",
+  "DefaultResponseStatuses_VerificationCodeWrong" : "Verification Code Is Not Correct",
+  "DefaultResponseStatuses_Unknown" : "Unknown",
+
+  "AuthStatuses_Success" : "Success",
+  "AuthStatuses_WrongCredentials" : "Wrong Credentials",
+  "AuthStatuses_WrongPassword" : "Wrong Password",
+  "AuthStatuses_AccountLocked" : "Account Locked",
+  "AuthStatuses_AccountPending" : "Account Pending",
+  "AuthStatuses_AccountSuspended" : "Account Suspended",
+  "AuthStatuses_InvalidChannel" : "InvalidChannel",
+  "AuthStatuses_MobileValidationPending" : "Mobile Validation Is Pending",
+  "AuthStatuses_WrongAuthenticationOption" : "Wrong Authentication Option",
+  "AuthStatuses_DocumentUploadPending" : "Document Upload Is Pending",
+  "AuthStatuses_LoanSignatureInfoPending" : "Loan Signature Info Pending",
+  "AuthStatuses_Unknown" : "Unknown",
+
+  "GeneralStatuses_APPROVED" : "Pending",
+  "GeneralStatuses_REQUESTED" : "Pending",
+  "GeneralStatuses_REJECTED" : "Rejected",
+  "GeneralStatuses_IN_PROGRESS" : "Pending",
+  "GeneralStatuses_SIGNED" : "Pending",
+  "GeneralStatuses_PARTIALLY_SETTLED" : "Pending",
+  "GeneralStatuses_SETTLED" : "Completed",
+  "GeneralStatuses_CLOSED" : "Completed",
+
+  "GeneralStatuses_LOAN_APPROVED_MONEY_DEPOSITED" : "Excellent News! We have just deposited your cash. Glad to help in your need.",
+  "GeneralStatuses_LOAN_APPROVED_MONEY_NOT_DEPOSITED" : "Your loan is almost ready to deposit",
+  "GeneralStatuses_LOAN_REQUESTED" : "Great news! Your loan is internally approved, complete the next few steps to collect money.",
+  "GeneralStatuses_LOAN_REJECTED" : "It seems we are unable to proceed with your loan. But we will always be here for your next emergency.",
+  "GeneralStatuses_LOAN_IN_PROGRESS" : "We are almost there. Just a few more steps to get it through !",
+  "GeneralStatuses_LOAN_SIGNED" : "Your loan is almost ready to deposit",
+  "GeneralStatuses_LOAN_PARTIALLY_SETTLED" : "Your loan is almost ready to deposit",
+  "GeneralStatuses_LOAN_SETTLED" : "Thank you for your payment. We’d love to help you even faster in your next loan.",
+  "GeneralStatuses_LOAN_CLOSED" : "Thank you for your payment. We’d love to help you even faster in your next loan.",
+
+  "LoanRequestStatuses_Success" : "Success",
+  "LoanRequestStatuses_PendingLoanExist" : "Pending Loan Exists",
+
+  "PIN_RESEND_SUCCESSFUL" : "pin resend successful",
+  "PIN_RESEND_UNSUCCESSFUL" : "pin resend unsuccessful",
+
+  "CHANGE_PASSWORD_SUCCESSFUL" : "change password successful",
+  "CHANGE_PASSWORD_UNSUCCESSFUL" : "change password unsuccessful",
+
+  "--COMMON ERRORS--":"",
+
+  "REQUIRED_ERROR" : "This Field is Required",
+  "INVALID_EMAIL" : "Enter a valid Email.",
+  "CONFIRM_PASSWORD_MISMATCH" : "Confirm password doesn't match with password.",
+
+  "--COMMON--":"",
+
+  "MINI_LOAN" : "සිංහල",
+  "BACK" : "සිංහල",
+  "NEXT" : "සිංහල",
+  "PASSWORD" : "සිංහල",
+  "BACK_BUTTON_TEXT" : "සිංහල",
+  "RS" : "සිංහල.",
+
+  "--MENU--":"",
+
+  "SIGN_IN" : "සිංහල",
+  "SIGN_OUT" : "සිංහල",
+
+  "--FIRST LOAN 1--":"",
+
+  "CASH_EMERGENCY_MSG_LINE_1" : "සිංහල",
+  "CASH_EMERGENCY_MSG_LINE_2" : "සිංහල?",
+  "YES_I_NEED_CASH" : "සිංහල !",
+  "ARE_YOU_AN_EXISTING_USER" : "සිංහල?",
+  "LOGIN_HERE" : "සිංහල",
+
+  "--FIRST LOAN 2--" : "",
+
+  "CURRENT_SALARY" : "සිංහල",
+  "YOUR_COMPANY" : "සිංහල",
+  "HOW_MUCH_CASH_DO_YOU_NEED" : "සිංහල?",
+  "DATE_OF_YOUR_SALARY" : "සිංහල",
+  "ADD_A_PROMO_CODE" : "සිංහල",
+  "PROMO_CODE" : "සිංහල",
+  "YOU_ARE_EXPECTED_TO_PAYBACK" : "සිංහල",
+  "YES_LETS_DO_THIS" : "සිංහල",
+
+  "--LOGIN--" : "",
+
+  "LOGIN":"සිංහල",
+  "USERNAME" : "සිංහල",
+  "LOGIN_WITH_GOOGLE" : "සිංහල",
+  "LOGIN_WITH_FACEBOOK" : "සිංහල",
+  "NEW_TO_MINI_LOANS" : "සිංහල?",
+  "REGISTER_HERE" : "සිංහල",
+  "OR" : "සිංහල",
+  "FORGOT_PASSWORD_?" : "සිංහල ? ",
+
+  "--REGISTER--" : "",
+
+  "REGISTER":"සිංහල",
+  "EMAIL":"සිංහල",
+  "REENTER_PASSWORD" : "සිංහල",
+  "ID_NUMBER" : "සිංහල",
+  "MOBILE_NUMBER" : "සිංහල",
+  "FIRST_NAME" : "සිංහල",
+  "LAST_NAME" : "සිංහල",
+  "DOB" : "සිංහල",
+  "HOME_ADDRESS" : "සිංහල",
+  "COMPANY_ADDRESS" : "සිංහල",
+  "COMPANY_NAME" : "සිංහල",
+
+  "--PIN VERIFICATION--" : "",
+
+  "PIN_VERIFICATION":"සිංහල",
+  "ENTER_YOUR_PIN" : "සිංහල",
+  "LETS_CONTINUE" : "සිංහල",
+  "DID_NT_RECEIVE_SMS" : "සිංහල?",
+  "RESEND" : "සිංහල",
+  "TROUBLESHOOT_GUIDE" : "සිංහල",
+  "NEED_ASSISTANCE_?" : "සිංහල",
+  "CALL_US" : "සිංහල",
+
+  "--DOCUMENT UPLOAD PENDING--" : "",
+
+  "DOCUMENT_UPLOAD_PENDING":"සිංහල",
+  "HI" : "සිංහල",
+  "FEW_MORE_STEPS_TO_COMPLETE" : "සිංහල",
+  "KEEP_FOLLOWING_READY" : "සිංහල",
+  "PASSPORT_OR_ID" : "සිංහල",
+  "BANK_STATEMENT" : "සිංහල",
+  "UTILITY_BILL" : "සිංහල",
+
+  "--DOCUMENT UPLOAD--" : "",
+
+  "DOCUMENT_UPLOAD":"සිංහල",
+  "SAMPLE" : "සිංහල",
+  "UPLOAD_SELFIE" : "සිංහල",
+  "UPLOAD_ID_OR_PASSPORT" : "සිංහල",
+  "UPLOAD_BANK_STATEMENT" : "සිංහල",
+  "UPLOAD_UTILITY_BILL" : "සිංහල",
+  "ALL_DONE" : "සිංහල",
+
+  "--SETTING MEETUP--" : "",
+
+  "COLLECT_SIGNATURE":"සිංහල",
+  "WE_WILL_COLLECT_SIGNATURE" : "සිංහල",
+  "WHERE_CAN_WE_MEET" : "සිංහල ?",
+  "WHEN_CAN_WE_MEET" : "සිංහල ?",
+  "HOME" : "සිංහල",
+  "COMPANY" : "සිංහල",
+  "READY_FOR_THE_VISIT" : "සිංහල",
+  "DATE_AND_TIME" : "සිංහල",
+  "ASAP" : "සිංහල",
+  "FLEXIBLE" : "සිංහල",
+  "DATE" : "සිංහල",
+  "TIME" : "සිංහල",
+
+  "--HOME--" : "",
+
+  "NEW_LOAN":"සිංහල",
+
+  "--MY ACCOUNT--" : "",
+
+  "MY_ACCOUNT":"සිංහල",
+  "BANK_NAME":"සිංහල",
+  "BRANCH_NAME" : "සිංහල",
+  "BANK_ACC_NAME" : "සිංහල",
+  "BANK_ACC_NO" : "සිංහල",
+  "EDIT" : "සිංහල",
+
+  "--MY LOANS--" : "",
+
+  "MY_LOANS":"සිංහල",
+  "LOAN":"සිංහල",
+  "LOAN_AMOUNT":"සිංහල",
+  "LOAN_GRANTED_DATE" : "සිංහල",
+  "SCHEDULED_DUE_DATE" : "සිංහල",
+  "AMOUNT_ON_SCHEDULED_DATE" : "සිංහල",
+  "ACTUAL_PAYMENT_DATE" : "සිංහල",
+  "ACTUAL_PAYMENT_AMOUNT" : "සිංහල",
+  "EDIT_MY_PROFILE_MESSAGE" : "සිංහල",
+
+  "--CHANGE PASSWORD--" : "",
+
+  "CHANGE_PASSWORD":"සිංහල",
+  "CURRENT_PASSWORD":"සිංහල",
+  "NEW_PASSWORD":"සිංහල",
+  "CONFIRM_PASSWORD":"සිංහල",
+
+  "--NOTIFICATIONS--" : "",
+
+  "NOTIFICATIONS":"සිංහල",
+  "ALERT":"සිංහල",
+
+  "--LANGUAGE--" : "",
+
+  "LANGUAGE":"සිංහල",
+
+  "--REFER A FRIEND--" : "",
+
+  "REFER_A_FRIEND":"සිංහල",
+  "REFER_BENEFIT":"සිංහල",
+  "YOUR_REF_CODE":"සිංහල",
+  "REF_PARTY":"සිංහල",
+  "REF_STATUS":"සිංහල",
+  "ACTIVATED_DATE":"සිංහල",
+  "AMOUNT":"සිංහල",
+  "SHARE_REFERRAL_CODE_MESSAGE":"සිංහල.",
+  "CLAIMED":"සිංහල",
+  "NOT_CLAIMED":"සිංහල",
+
+  "--ABOUT US--" : "",
+
+  "ABOUT_US":"සිංහල",
+
+  "--PROMO CODE--" : "",
+
+  "ENTER_PROMO_CODE":"සිංහල",
+  "APPLY":"සිංහල",
+
+  "--FORGOT PASSWORD--" : "",
+
+  "FORGOT_PASSWORD":"සිංහල",
+  "ENTER_EMAIL_ADDRESS":"සිංහල",
+  "REQUEST_PASSWORD":"සිංහල",
+  "FORGOT_PASSWORD_SUCCESS":"සිංහල.",
+
+  "--NEW LOAN--" : "",
+
+  "--FAQ--" : "",
+
+  "FAQ":"සිංහල",
+
+  "END" : "සිංහල",
+
+  "BANK_SELECTION_GREETING" : "Following Banks/Institutions are ready to help you.",
+  "BANK_SELECTION_INSTRUCTIONS": "Please select a maximum of upto [max_count] and minimum of upto [min_count] banks/institutions to reach out to you in the first round ?",
+
+  "DATA_COLLECTION_STATUS": "We are ready to send your details",
+  "DATA_COLLECTION_FORM_INSTRUCTIONS" : "Please fill in the following",
+  "EXISTING_LOANS" : "What are your existing loans?",
+  "MONTHLY_COMMITMENTS" : "What are your monthly commitments?",
+  "HOME_ADDRESS_CHECK" : "What is your Home Address?",
+  "GET_BANKS_TO_CALL":"Get Banks to Call Me",
+}

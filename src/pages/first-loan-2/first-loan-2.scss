@@ -1,0 +1,187 @@
+page-first-loan-2 {
+  .request-form .list .item{
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .request-form .list .item .item-inner{
+    padding: 0;
+    border: none;
+  }
+
+  .request-form .item-input:last-child{
+    border: none;
+  }
+
+  .request-form .list .item .label{
+    margin-top: 0;
+    color: #f5f5f5;
+  }
+
+  .request-form .list .item .input input{
+    margin: 12px 0 10px 0;
+    padding-bottom: 5px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+
+  .step-message.request-form{
+    margin-top: 0;
+    padding-top: 5px;
+  }
+
+  .request-form .card{
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background-color: transparent;
+  }
+
+  .request-form .card .card-content{
+    padding: 5px 15px;
+    text-align: center;
+  }
+
+  .payback-details{
+    color: #fff;
+  }
+
+  .payback-details span{
+    font-size: 15px;
+    border-bottom: 1px dashed #fff;
+  }
+
+  .btn-default{
+    margin-top: 15px;
+  }
+
+  .btn-info{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 8px;
+    margin: 0 0 0 5px;
+    line-height: 1;
+    font-weight: 700;
+    border-radius: 50%;
+  }
+
+  .step-message.request-form .list:first-child{
+    margin-bottom: 0;
+  }
+
+  .promo-code-toggle{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-decoration: underline;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .promo-code-toggle a{
+    color: #fff;
+  }
+
+  ion-auto-complete {
+
+  }
+
+  .company-auto-complete-item{
+    min-height: initial;
+  }
+
+  .company-auto-complete{
+    margin-bottom: 10px
+  }
+
+  .company-auto-complete .searchbar-input-container{
+    border: none;
+    border-bottom: 1px solid #fff;
+  }
+
+  .company-auto-complete .searchbar{
+    background-color: transparent !important;
+  }
+
+  .company-auto-complete .searchbar .searchbar-input{
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .company-auto-complete .searchbar .searchbar-search-icon{
+    display: none;
+  }
+
+  .range{
+    padding: 0 !important;
+  }
+
+  .range .label:first-child{
+    padding: 0 10px 0 0 !important;
+    margin: 0 5px 0 0 !important;
+  }
+
+  .range .label:last-child{
+    padding:0 0 0 10px !important;
+    margin: 0 0 0 5px !important;
+  }
+
+  .badge{
+    margin: 0 !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .select{
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .select .select-icon .select-icon-inner{
+    border-color: #fff;
+  }
+
+  .select .select-text{
+    min-height: 3rem;
+    line-height: 3rem;
+    display: block;
+  }
+
+  .date-of-month{
+    padding: 5px 0 0 0 !important;
+    position: relative;
+  }
+
+  .select.date-of-month .select-icon .select-icon-inner{
+    border-color: transparent;
+  }
+
+  .top-fix{
+    margin-top: 5px;
+  }
+
+  ion-select{
+    margin-bottom: 15px;
+  }
+
+}
+
+.select-popover .popover-content{
+  width: initial;
+}
+
+.select-popover .popover-content .list .item .item-inner .label{
+  margin-right: 15px;
+}

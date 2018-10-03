@@ -1,0 +1,51 @@
+<ion-title class="top-title">{{"UPDATE_YOUR_DETAILS" | translate}}</ion-title>
+<ion-header class="top-header">
+  <ion-navbar>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="pageBackground" padding>
+  <h3 class="greeting-intro-text">{{ "DATA_COLLECTION_STATUS" | translate }}</h3>
+  <p>{{ "DATA_COLLECTION_FORM_INSTRUCTIONS" | translate }}</p>
+  <form [formGroup]="dataCollectionForm" (submit)="updateDataCollection()">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>{{"EXISTING_LOANS" | translate}}</ion-label>
+        <ion-textarea formControlName="existingLoans"></ion-textarea>
+      </ion-item>
+      <span class="error-message" *ngIf="dataCollectionForm.get('existingLoans').invalid && (dataCollectionForm || dataCollectionForm.get('existingLoans').dirty || dataCollectionForm.get('existingLoans').touched)">
+        <div *ngIf="dataCollectionForm.get('existingLoans').errors.required">
+            {{'REQUIRED_ERROR' | translate}}
+        </div>
+    </span>
+      <ion-item>
+        <ion-label stacked>{{"MONTHLY_COMMITMENTS" | translate}}</ion-label>
+        <ion-textarea formControlName="monthlyCommitments"></ion-textarea>
+      </ion-item>
+      <!--<span class="error-message">Sample Error Message</span>-->
+      <ion-item>
+        <ion-label stacked>{{"HOME_ADDRESS_CHECK" | translate}}</ion-label>
+        <ion-textarea formControlName="homeAddress"></ion-textarea>
+      </ion-item>
+      <span class="error-message" *ngIf="dataCollectionForm.get('homeAddress').invalid && (dataCollectionForm || dataCollectionForm.get('homeAddress').dirty || dataCollectionForm.get('homeAddress').touched)">
+        <div *ngIf="dataCollectionForm.get('homeAddress').errors.required">
+            {{'REQUIRED_ERROR' | translate}}
+        </div>
+    </span>
+    </ion-list>
+    <div>
+      <button color="default1" class="btn-default-dbg" ion-button block type="submit">
+        {{"GET_BANKS_TO_CALL"| translate}}
+      </button>
+    </div>
+  </form>
+
+</ion-content>

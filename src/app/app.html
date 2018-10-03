@@ -1,1 +1,10 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-nav #myNav [root]="rootPage"></ion-nav>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title text-center>
+            <button color="light" class="menu-button" ion-button large outline clear icon-only (click)="presentMenuModal()">
+                <ion-icon name="apps"></ion-icon>
+            </button>
+        </ion-title>
+    </ion-toolbar>
+</ion-footer>

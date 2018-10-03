@@ -23,6 +23,10 @@ core/test-components/
 core/css/
 angular/css/
 $RECYCLE.BIN/
+.sourcemaps/
+package-lock.json.*
+www
+ul_web_hooks
 
 .DS_Store
 Thumbs.db

@@ -1,0 +1,82 @@
+<ion-title class="top-title">{{ "MINI_LOAN" | translate }}</ion-title>
+<ion-header class="top-header">
+  <ion-navbar>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="pageBackground" padding>
+  <div class="step-message request-form">
+    <form *ngIf="firstLoanForm" [formGroup]="firstLoanForm" (ngSubmit)="saveFirstLoan(firstLoanForm.valid)">
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>{{ "PURPOSE_OF_YOUR_BORROWING" | translate }}</ion-label>
+          <ion-select interface="popover" [formControlName]="'purpose'">
+            <ion-option *ngFor="let requestType of requestTypes" [value]="requestType.Key">{{requestType.Value}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <span class="error-message" *ngIf="firstLoanForm.get('purpose').invalid &&
+                    (firstLoanFormSubmitted || firstLoanForm.get('purpose').dirty || firstLoanForm.get('purpose').touched)">
+                  <div *ngIf="firstLoanForm.get('purpose').errors.required">
+                      {{'REQUIRED_ERROR' | translate}}
+                  </div>
+              </span>
+        <ion-item>
+          <ion-label stacked>{{ "HOW_MUCH_YOU_WISH_TO_BORROW" | translate }}</ion-label>
+          <ion-input type="number" [formControlName]="'amount'"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="firstLoanForm.get('amount').invalid &&
+                    (firstLoanFormSubmitted || firstLoanForm.get('amount').dirty || firstLoanForm.get('amount').touched)">
+                  <div *ngIf="firstLoanForm.get('amount').errors.required">
+                      {{'REQUIRED_ERROR' | translate}}
+                  </div>
+                  <div *ngIf="firstLoanForm.get('amount').errors.number">
+                      {{'FIELD_INVALID_ERROR' | translate}}
+                  </div>
+              </span>
+        <ion-item>
+          <ion-label stacked>{{ "TYPE_OF_INCOME" | translate }}</ion-label>
+          <ion-select interface="popover" [formControlName]="'incomeType'">
+            <ion-option *ngFor="let incomeType of incomeTypes" [value]="incomeType.Key">{{incomeType.Value}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <span class="error-message" *ngIf="firstLoanForm.get('incomeType').invalid &&
+                    (firstLoanFormSubmitted || firstLoanForm.get('incomeType').dirty || firstLoanForm.get('incomeType').touched)">
+                  <div *ngIf="firstLoanForm.get('incomeType').errors.required">
+                      {{'REQUIRED_ERROR' | translate}}
+                  </div>
+              </span>
+        <ion-item *ngIf="!userService.user.isAuthorized">
+          <ion-label stacked>{{ "MONTHLY_INCOME" | translate }}</ion-label>
+          <ion-input type="number" [formControlName]="'monthlyIncome'"></ion-input>
+        </ion-item>
+        <span  class="error-message" *ngIf="!userService.user.isAuthorized && firstLoanForm.get('monthlyIncome').invalid &&
+                     (firstLoanFormSubmitted || firstLoanForm.get('monthlyIncome').dirty || firstLoanForm.get('monthlyIncome').touched)">
+                  <div *ngIf="firstLoanForm.get('monthlyIncome').errors.required">
+                      {{'REQUIRED_ERROR' | translate}}
+                  </div>
+                  <div *ngIf="firstLoanForm.get('monthlyIncome').errors.number">
+                      {{'FIELD_INVALID_ERROR' | translate}}
+                  </div>
+              </span>
+      </ion-list>
+
+      <div>
+        <ion-card>
+          <ion-card-content>
+            <button color="default1" class="btn-default" ion-button type="submit">
+              {{ "YES_LETS_DO_THIS" | translate }}
+            </button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </form>
+  </div>
+</ion-content>

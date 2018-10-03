@@ -1,0 +1,29 @@
+<ion-title class="top-title">{{ "BANK_SELECTION_TITLE" | translate }}</ion-title>
+<ion-header class="top-header">
+  <ion-navbar>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="pageBackground" padding>
+  <!--<p class="greeting-text" text-right>HI Text,</p>-->
+  <h3 class="greeting-intro-text">{{ "BANK_SELECTION_GREETING" | translate }}</h3>
+  <p>{{ BANK_SELECTION_INSTRUCTIONS }}</p>
+  <ion-list>
+    <ion-item *ngFor="let institute of institutes; let i = index">
+      <ion-label>{{institute.Name}}</ion-label>
+      <ion-checkbox (ionChange)="selectInstitute($event, institute)"
+                    [disabled]="selectedList.length == systemParameters.MaxInstitute && selectedList.indexOf(institute) < 0">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <button class="btn-default-dbg" ion-button block type="submit" [disabled]="selectedList.length < systemParameters.MinInstitute" (click)="submitInstituteList()">
+    {{"SUBMIT" | translate}}
+  </button>
+</ion-content>

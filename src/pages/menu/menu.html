@@ -1,0 +1,92 @@
+<ion-content class="main-menu">
+</ion-content>
+<ion-footer>
+  <!--Not Logged In Menu Start-->
+
+  <ion-grid [hidden]="userService.user.isAuthorized">
+    <ion-row>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('AboutUsPage')"><ion-icon name="quote"></ion-icon></button>
+        <p class="menu-name">{{ "ABOUT_US" | translate }}</p>
+      </ion-col>
+      <ion-col text-center>
+        <a class="menu-icon" ion-button large outline icon-only round color="light" href="tel:{{systemTelephone}}"><ion-icon name="call"></ion-icon></a>
+        <p class="menu-name">{{ "CALL_US" | translate }}</p>
+      </ion-col>
+      <ion-col text-center class="invisible">
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('AboutUsPage')"><ion-icon name="quote"></ion-icon></button>
+        <p class="menu-name">{{ "ABOUT_US" | translate }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('FaqPage')"><ion-icon name="help"></ion-icon></button>
+        <p class="menu-name">{{ "FAQ" | translate }}</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('LanguagePage')"><ion-icon name="globe"></ion-icon></button>
+        <p class="menu-name">සිං/En/தமி</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('LoginPage')"><ion-icon name="log-in"></ion-icon></button>
+        <p class="menu-name">{{ "SIGN_IN" | translate }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--Not Logged In Menu End-->
+
+  <!--Logged in Menu Start-->
+  <ion-grid [hidden]="!userService.user.isAuthorized">
+    <ion-row>
+      <ion-col text-center>
+        <a class="menu-icon" ion-button large outline icon-only round color="light" href="tel:{{systemTelephone}}"><ion-icon name="call"></ion-icon></a>
+        <p class="menu-name">{{ "CALL_US" | translate }}</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('MyAccountPage')"><ion-icon name="information"></ion-icon></button>
+        <p class="menu-name">{{ "MY_ACCOUNT" | translate }}</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('ReferAFriendPage')"><ion-icon name="person"></ion-icon></button>
+        <p class="menu-name">{{ "REFER_A_FRIEND" | translate }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <div class="notificationNumber" *ngIf="unreadNotificationCount>0"><span>{{unreadNotificationCount>99 ? '99+' : unreadNotificationCount}}</span></div>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('NotificationsPage')"><ion-icon name="notifications"></ion-icon></button>
+        <p class="menu-name">{{ "NOTIFICATIONS" | translate }}</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('AboutUsPage')"><ion-icon name="quote"></ion-icon></button>
+        <p class="menu-name">{{ "ABOUT_US" | translate }}</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('FaqPage')"><ion-icon name="help"></ion-icon></button>
+        <p class="menu-name">{{ "FAQ" | translate }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('LanguagePage')"><ion-icon name="globe"></ion-icon></button>
+        <p class="menu-name">සිං/En/தமி</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('ChangePasswordPage')" [disabled]="userService.user.AuthOption != appConfig.AUTH_OPTIONS.DEFAULT.ID"><ion-icon name="key"></ion-icon></button>
+        <p class="menu-name">{{ "CHANGE_PASSWORD" | translate }}</p>
+      </ion-col>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu('SignOut')"><ion-icon name="log-in"></ion-icon></button>
+        <p class="menu-name">{{ "SIGN_OUT" | translate }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--Logged in Menu End-->
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <button class="menu-icon" ion-button large outline icon-only round color="light" (click)="clickMenu()"><ion-icon name="close"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
