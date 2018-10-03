@@ -9,6 +9,7 @@ import { Firebase } from '@ionic-native/firebase';
 import { Badge } from '@ionic-native/badge';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFirestore } from 'angularfire2/firestore';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -40,6 +41,7 @@ import { FcmProvider } from '../providers/fcm/fcm';
     Firebase,
     FcmProvider,
     Badge
+    // AngularFirestore
   ]
 })
 export class AppModule {}

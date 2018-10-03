@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Firebase } from '@ionic-native/firebase';
 import { Platform } from 'ionic-angular';
-import { AngularFirestore } from 'angularfire2/firestore';
+// import { AngularFirestore } from 'angularfire2/firestore';
 
 
 @Injectable()
@@ -9,7 +9,7 @@ export class FcmProvider {
 
   constructor(
       public firebaseNative: Firebase,
-      public afs: AngularFirestore,
+      // public afs: AngularFirestore,
       private platform: Platform
   ) { }
 
@@ -34,14 +34,14 @@ export class FcmProvider {
   private saveTokenToFirestore(token) {
       if (!token) return;
 
-      const devicesRef = this.afs.collection('devices');
+      // const devicesRef = this.afs.collection('devices');
 
       const docData = {
           token,
           userId: 'testUser',
       };
 
-      return devicesRef.doc(token).set(docData)
+      // return devicesRef.doc(token).set(docData)
   }
 
   // Listen to incoming FCM messages
