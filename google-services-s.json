@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "951909698847",
-    "firebase_url": "https://money-me.firebaseio.com",
-    "project_id": "money-me",
-    "storage_bucket": "money-me.appspot.com"
+    "project_number": "1042089685993",
+    "firebase_url": "https://moneyme-fd2ea.firebaseio.com",
+    "project_id": "moneyme-fd2ea",
+    "storage_bucket": "moneyme-fd2ea.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:951909698847:android:67104dfe821e001f",
+        "mobilesdk_app_id": "1:1042089685993:android:4d3ce131550160d9",
         "android_client_info": {
-          "package_name": "com.mutants.moneyme"
+          "package_name": "com.mutants.moneymeiv4"
         }
       },
       "oauth_client": [
         {
-          "client_id": "951909698847-violpq4n477nkk3vhq7fv4anjpfiph50.apps.googleusercontent.com",
+          "client_id": "1042089685993-qn1gmln5pr4t5piio2jlr91thk5e571n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB7IU8rQdjOAvm5Oo-KnByBwbK26JXgJOU"
+          "current_key": "AIzaSyATRUKo_Xqx1-pJENCRXcp9dJ4tXLOaBUk"
         }
       ],
       "services": {

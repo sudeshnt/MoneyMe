@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>951909698847-0s5sngc3hkv3lq6r7rlfabamcum5bu2l.apps.googleusercontent.com</string>
+	<string>1042089685993-e3tmo1in7o4k48jfqv4vsnuu0ml6k3nb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.951909698847-0s5sngc3hkv3lq6r7rlfabamcum5bu2l</string>
+	<string>com.googleusercontent.apps.1042089685993-e3tmo1in7o4k48jfqv4vsnuu0ml6k3nb</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDFEIoaBYD1fB2NEl4evLlCh91EkpTOci8</string>
+	<string>AIzaSyBIrdbvYwClqlipXZYI4RSiTT1EpVCaBX4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>951909698847</string>
+	<string>1042089685993</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mutants.moneyme</string>
+	<string>com.mutants.moneymeiv4</string>
 	<key>PROJECT_ID</key>
-	<string>money-me</string>
+	<string>moneyme-fd2ea</string>
 	<key>STORAGE_BUCKET</key>
-	<string>money-me.appspot.com</string>
+	<string>moneyme-fd2ea.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:951909698847:ios:67104dfe821e001f</string>
+	<string>1:1042089685993:ios:4d3ce131550160d9</string>
 	<key>DATABASE_URL</key>
-	<string>https://money-me.firebaseio.com</string>
+	<string>https://moneyme-fd2ea.firebaseio.com</string>
 </dict>
 </plist>

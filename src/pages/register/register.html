@@ -1,18 +1,129 @@
-<!--
-  Generated template for the RegisterPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<ion-title class="top-title">{{ "REGISTER" | translate }}</ion-title>
+<ion-header class="top-header">
   <ion-navbar>
-    <ion-title>register</ion-title>
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col text-right>
+          <img src="assets/imgs/logo1.png" class="top-logo"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="pageBackground" padding>
+  <div class="step-message register-form">
+
+    <div>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row align-items-center>
+              <ion-col no-padding col-4>
+                <p class="register-form-heading">Register using</p>
+              </ion-col>
+              <ion-col col-4>
+                <button class="btn-login" ion-button color="danger" (click)="socialRegistration('G_PLUS')" [disabled]="authOption == appConfig.AUTH_OPTIONS.G_PLUS.ID" block>
+                  <i class="fa fa-google" aria-hidden="true" ></i> {{ "Google" | translate }}
+                  <!--<ion-icon name="logo-google"></ion-icon>-->
+                </button>
+              </ion-col>
+              <ion-col col-4>
+                <button class="btn-login" ion-button color="default" (click)="socialRegistration('FB')" [disabled]="authOption == appConfig.AUTH_OPTIONS.FB.ID" block>
+                  <i class="fa fa-facebook" aria-hidden="true"></i> {{ "Facebook" | translate }}
+                  <!--<ion-icon name="logo-facebook"></ion-icon>-->
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="registerUser()">
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>{{ "EMAIL" | translate }}</ion-label>
+          <ion-input type="email" formControlName="Email"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('Email').hasError('error_msg')">{{registrationForm.get('Email').getError('error_msg')}}</span>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('Email').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('Email').hasError('invalidEmailAddress') && !registrationForm.get('Email').hasError('required')">{{'INVALID_EMAIL' | translate}}</span>
+
+        <ion-item [hidden]="authOption != appConfig.AUTH_OPTIONS.DEFAULT.ID">
+          <ion-label stacked>{{ "PASSWORD" | translate }}</ion-label>
+          <ion-input type="password" formControlName="Password"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('Password').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+
+        <ion-item [hidden]="authOption != appConfig.AUTH_OPTIONS.DEFAULT.ID">
+          <ion-label stacked>{{ "REENTER_PASSWORD" | translate }}</ion-label>
+          <ion-input type="password" formControlName="ConfirmPassword"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('ConfirmPassword').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('ConfirmPassword').hasError('notEquivalent')
+                                             && !registrationForm.get('ConfirmPassword').hasError('required')">{{'CONFIRM_PASSWORD_MISMATCH' | translate}}</span>
+
+        <ion-item>
+          <ion-label stacked>{{ "MOBILE_NUMBER" | translate }}</ion-label>
+          <ion-input type="tel" formControlName="Mobile"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('Mobile').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+
+        <ion-item>
+          <ion-label>{{ "I_AM_SRI_LANKAN" | translate }}</ion-label>
+          <ion-checkbox [formControlName]="'IsSriLankan'"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>{{ "ID_NUMBER" | translate }}</ion-label>
+          <ion-input type="text" formControlName="IdentificationNo"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('IdentificationNo').hasError('error_msg')">{{registrationForm.get('IdentificationNo').getError('error_msg')}}</span>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('IdentificationNo').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+
+        <ion-item>
+          <ion-label stacked>{{ "FIRST_NAME" | translate }}</ion-label>
+          <ion-input type="text" formControlName="FirstName"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('FirstName').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+
+        <ion-item>
+          <ion-label stacked>{{ "LAST_NAME" | translate }}</ion-label>
+          <ion-input type="text" formControlName="LastName"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('LastName').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+
+        <ion-item>
+          <ion-label stacked>{{ "DOB" | translate }}</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY" [formControlName]="'DateofBirth'"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>{{ "COMPANY_NAME" | translate }}</ion-label>
+          <ion-input type="text" formControlName="CompanyName"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>{{ "COMPANY_ADDRESS" | translate }}</ion-label>
+          <ion-input type="text" formControlName="CompanyAddress"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>{{'YEARS_OF_EXPERIENCE' | translate}}</ion-label>
+          <ion-input type="number" formControlName="WorkingExperience"></ion-input>
+        </ion-item>
+        <span class="error-message" *ngIf="registrationFormSubmitted && registrationForm.get('WorkingExperience').hasError('required')">{{'REQUIRED_ERROR' | translate}}</span>
+
+      </ion-list>
+
+      <div>
+        <button color="default1" class="btn-default-dbg" ion-button block type="submit">
+          {{ "NEXT" | translate }}
+        </button>
+      </div>
+    </form>
+
+  </div>
 
 </ion-content>

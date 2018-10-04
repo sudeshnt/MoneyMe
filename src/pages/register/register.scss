@@ -1,3 +1,88 @@
 page-register {
+  .register-form .card{
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
 
+  .register-form .card .card-content,
+  .register-form .card .card-content .grid{
+    padding: 0;
+  }
+
+  .register-form .card .card-content .grid .col:not([no-padding]){
+    padding: 0 5px;
+  }
+
+  .register-form .card .card-content .grid .col .icon,
+  .register-form .card .card-content .grid .col i{
+    margin-right: 4px;
+  }
+
+  .register-form .card .card-content .register-form-heading{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: #fff;
+  }
+
+  .register-form .list{
+    margin-bottom: 10px;
+  }
+
+  .register-form .list .item{
+    background-color: transparent;
+    padding: 0;
+    border: none;
+  }
+
+  .register-form .list .item .item-inner{
+    padding: 0;
+    border: none;
+  }
+
+  .register-form .list .item .item-inner .label{
+    margin-right: 0;
+    color: #f5f5f5;
+  }
+
+  .register-form .list .item .item-inner .input input{
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+
+  .step-message.register-form{
+    margin-top: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .button[color="danger"],
+  .button[color="default"]{
+    -webkit-box-shadow: 1px 1px 5px #444;
+    -moz-box-shadow: 1px 1px 5px #444;
+    box-shadow: 1px 1px 5px #444;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+  }
+
+  .item.item-checkbox ion-label.label{
+    font-size: 1.2rem;
+    color: #f5f5f5;
+  }
 }

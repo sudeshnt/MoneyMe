@@ -27,7 +27,7 @@ export class FcmProvider {
           await this.firebaseNative.grantPermission();
       }
 
-      return this.saveTokenToFirestore(token)
+      return token;
   }
 
   // Save the token to firestore

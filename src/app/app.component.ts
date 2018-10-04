@@ -159,11 +159,12 @@ export class MyApp {
         this.fcm.listenToNotifications().pipe(
             tap(msg => {
                 // show a toast
-                const toast = this.toastCtrl.create({
-                    message: msg.body,
-                    duration: 3000
-                });
-                toast.present();
+                // const toast = this.toastCtrl.create({
+                //     message: msg.body,
+                //     duration: 3000
+                // });
+                // toast.present();
+                this.showAlert(msg.title ? msg.title : 'Notification received',msg.body);
             })
         ).subscribe()
     }
