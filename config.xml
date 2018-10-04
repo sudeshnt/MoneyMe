@@ -100,7 +100,7 @@
     <plugin name="cordova-sqlite-storage" spec="^2.4.0" />
     <plugin name="cordova-plugin-badge" spec="^0.8.7" />
     <plugin name="cordova-plugin-firebase" spec="^2.0.2" />
-    <engine name="ios" spec="4.5.5" />
-    <engine name="android" spec="6.3.0" />
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
+    <engine name="ios" spec="4.5.5" />
+    <engine name="android" spec="6.4.0" />
 </widget>
