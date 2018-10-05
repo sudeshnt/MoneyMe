@@ -11,7 +11,7 @@ export class NotificationDataServiceProvider {
   //GET
   public getNotificationsByUser(req){
     let promise = new Promise((resolve, reject) => {
-      return this.apiService.httpGet(AppConfig.NOTIFICATION_API_URL,SeviceConfig.CLIENT_NOTIFICATION_SERVICE,"/GetSystemNotificationByUser?userReferenceId="+req.userReferenceId+"&pNo="+req.pNo+"&pSize="+req.pSize+"&rowCountRequired="+req.rowCountRequired,{},{"AppSessionId" : this.userService.user.SessionId}, false).then((data : any) => {
+      return this.apiService.httpGet(AppConfig.NOTIFICATION_API_URL,SeviceConfig.CLIENT_NOTIFICATION_SERVICE,"/GetSystemNotificationByUser?userReferenceId="+req.userReferenceId+"&pNo="+req.pNo+"&pSize="+req.pSize+"&rowCountRequired="+req.rowCountRequired+"&sortCol="+req.sortCol,{},{"AppSessionId" : this.userService.user.SessionId}, false).then((data : any) => {
         resolve(data);
       }).catch((error : any) => {
         resolve(null);

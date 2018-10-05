@@ -21,6 +21,7 @@ export class MyLoansPage {
     pagination:any = {
         "pNo" : 1,
         "Size" : Config.pageSize,
+        "sortCol" : 'id descending',
         "rowCountRequired" : true,
         "recordCount" : 0
     };

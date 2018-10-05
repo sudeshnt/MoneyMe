@@ -6,6 +6,7 @@ import { ToastController } from 'ionic-angular';
 import { tap } from 'rxjs/operators';
 import { Badge } from "@ionic-native/badge";
 import { BackgroundMode } from '@ionic-native/background-mode';
+import {Observable} from "rxjs";
 
 import { FcmProvider } from "../providers/fcm/fcm";
 import { TranslateService } from "@ngx-translate/core";
@@ -15,19 +16,21 @@ import {LocalDataServiceProvider} from "../providers/local-data-service/local-da
 import {AuthDataServiceProvider} from "../providers/data-services/auth-data-service/auth-data-service";
 import {PublicDataServiceProvider} from "../providers/data-services/public-data-service/public-data-service";
 import {ProfileDataServiceProvider} from "../providers/data-services/profile-data-service/profile-data-service";
+import {NotificationDataServiceProvider} from "../providers/data-services/notification-data-service/notification-data-service";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
     rootPage:any;
+    NotificationReminder;
     currentLang:string = "";
 
     constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private fcm: FcmProvider, private toastCtrl: ToastController,
             private app: App, private translate: TranslateService, private userService : UserProvider, private localDataService : LocalDataServiceProvider,
             private config: Config, public modalCtrl: ModalController, public alertCtrl: AlertController, private badge :Badge, public events: Events,
             private authDataService : AuthDataServiceProvider, private publicDataService: PublicDataServiceProvider, private profileDataService: ProfileDataServiceProvider,
-            private backgroundMode: BackgroundMode) {
+            private backgroundMode: BackgroundMode, private notificationDataService : NotificationDataServiceProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -42,6 +45,13 @@ export class MyApp {
             });
         }
     });
+    this.NotificationReminder = Observable.interval(30000).subscribe((val) => {
+      this.userService.getLocalAuthResponse().then((user:any)=>{
+          if(user && user.isAuthorized && user.AuthStatusId){
+            this.initUnreadNotificationCount();
+          }
+      });
+     });
     this.initSystemTelephone();
     this.initPageNavigationEvent();
     this.initHttpErrorHandler();
@@ -277,11 +287,10 @@ export class MyApp {
 
     signOut(){
         if(this.userService.user.isAuthorized){
-            this.userService.removeLocalAuthResponse();
-
             this.authDataService.signOut().then((data)=>{
                 this.clearBadges();
                 this.rootPage = 'LoginPage';
+                this.userService.removeLocalAuthResponse();
             });
         }
     }
@@ -314,6 +323,39 @@ export class MyApp {
         });
         toast.present();
     }
+
+  initUnreadNotificationCount(){
+      let req = {
+        "userReferenceId" : AppConfig.clientPrefix+this.userService.user.ClientId
+      };
+      this.notificationDataService.getUnreadNotificationCountByUser(req).then((data:any)=>{
+        if(data>0){
+          this.setNotificationBadge(data);
+        }
+      });
+  }
+
+  async setNotificationBadge(data){
+      try {
+          let hasPermission = await this.badge.hasPermission();
+          this.setBadges(data);
+          if (!hasPermission) {
+                  let permission = await this.badge.requestPermission();
+                  this.setBadges(data);
+          }
+      } catch (e) {
+          console.error(e);
+      }
+  }
+
+  async setBadges(badgeNumber: number) {
+      try {
+          let badges = await this.badge.set(badgeNumber);
+          // console.log(badges);
+          } catch (e) {
+          console.error(e);
+      }
+  }
 
 }
 

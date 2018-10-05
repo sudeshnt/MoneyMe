@@ -22,7 +22,7 @@ export class LoanDataServiceProvider {
   //GET
   public getAllLoans(req){
     let promise = new Promise((resolve, reject) => {
-      return this.apiService.httpGet(AppConfig.API_URL,SeviceConfig.CLIENT_LOAN_SERVICE,"/GetAllLoans?pNo="+req.pNo+"&pSize="+req.Size+"&rowCountRequired="+req.rowCountRequired,{},null, false).then((data : any) => {
+      return this.apiService.httpGet(AppConfig.API_URL,SeviceConfig.CLIENT_LOAN_SERVICE,"/GetAllLoans?pNo="+req.pNo+"&pSize="+req.Size+"&rowCountRequired="+req.rowCountRequired+"&sortCol="+req.sortCol,{},null, false).then((data : any) => {
         resolve(data);
       }).catch((error : any) => {
         resolve(null);

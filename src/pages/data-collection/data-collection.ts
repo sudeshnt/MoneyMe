@@ -12,10 +12,16 @@ import {LoanDataServiceProvider} from "../../providers/data-services/loan-data-s
 })
 export class DataCollectionPage {
 
+    loanID;
     private dataCollectionForm : FormGroup;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder,
                 public toastCtrl: ToastController,private userService : UserProvider,private loanDataService: LoanDataServiceProvider) {
+        if(navParams.get('loan')){
+            this.loanID = navParams.get('loan').Id;
+        }else{
+            this.loanID = this.userService.user.LoanId
+        }
         this.initDataCollectionForm();
     }
 
@@ -32,7 +38,7 @@ export class DataCollectionPage {
     updateDataCollection(){
         if(this.dataCollectionForm.valid){
             let req = {
-                'loanId' : this.userService.user.LoanId,
+                'loanId' : this.loanID,
                 'Mode' : AppConfig.LoanRequestUpdateModes.AdditionalDetailsUpdate,
                 "ExistingLoanDetails": this.dataCollectionForm.value.existingLoans,
                 "ExistingCommitments": this.dataCollectionForm.value.monthlyCommitments,

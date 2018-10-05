@@ -21,9 +21,9 @@
     <h3 *ngSwitchCase="appConfig.GeneralStatuses.REJECTED">{{ 'GeneralStatuses_LOAN_REJECTED' | translate}}</h3>
     <h3 *ngSwitchCase="appConfig.GeneralStatuses.SIGNED">{{ 'GeneralStatuses_LOAN_SIGNED' | translate}}</h3>
     <h3 *ngSwitchCase="appConfig.GeneralStatuses.PARTIALLY_SETTLED">{{ 'GeneralStatuses_LOAN_PARTIALLY_SETTLED' | translate}}</h3>
-    <div *ngSwitchCase="appConfig.GeneralStatuses.APPROVED" [ngSwitch]="isMoneyDeposited">
-      <h3 *ngSwitchCase="true">{{ 'GeneralStatuses_LOAN_APPROVED_MONEY_DEPOSITED' | translate}}</h3>
-      <h3 *ngSwitchCase="false">{{ 'GeneralStatuses_LOAN_APPROVED_MONEY_NOT_DEPOSITED' | translate}}</h3>
+    <div *ngSwitchCase="appConfig.GeneralStatuses.APPROVED" [ngSwitch]="isShownToExternal"><!--isMoneyDeposited-->
+      <h3 *ngSwitchCase="true">{{ 'GeneralStatuses_LOAN_APPROVED_SHOWN_TO_EXTERNAL' | translate}}</h3>
+      <h3 *ngSwitchCase="false">{{ 'GeneralStatuses_LOAN_APPROVED_NOT_SHOWN_TO_EXTERNAL' | translate}}</h3>
     </div>
     <h3 *ngSwitchCase="appConfig.GeneralStatuses.SETTLED">{{ 'GeneralStatuses_LOAN_SETTLED' | translate}}</h3>
     <h3 *ngSwitchCase="appConfig.GeneralStatuses.CLOSED">{{ 'GeneralStatuses_LOAN_CLOSED' | translate}}</h3>

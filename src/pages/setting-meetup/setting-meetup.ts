@@ -120,8 +120,12 @@ export class SettingMeetupPage {
             this.loanDataService.submitSignatureInfo(req).then((data:any)=>{
                 if(data){
                     if(data.ResponseStatusId == AppConfig.DefaultResponseStatuses.Success){
-                        this.userService.updateAuthResponseStatus("AuthStatusId",AppConfig.AuthStatuses.Success);
-                        this.navCtrl.setRoot('HomePage')
+                        Promise.all([
+                            this.userService.updateAuthResponseStatus("AuthStatusId",AppConfig.AuthStatuses.Success),
+                            this.userService.getLocalAuthResponse(),
+                        ]).then(value => {
+                            this.navCtrl.setRoot('HomePage')
+                        });
                     }else{
                         this.publicFunctions.getStatusMessageTranslations("DefaultResponseStatuses",data.ResponseStatusId).then((errorMessage : any) => {
                             this.signatureInfoForm.setErrors({"error_msg": errorMessage ? errorMessage : ""});

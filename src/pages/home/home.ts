@@ -17,6 +17,7 @@ export class HomePage {
 
     loanStatusId:number = AppConfig.GeneralStatuses.REQUESTED;
     isMoneyDeposited:boolean = false;
+    isShownToExternal:boolean = false;
 
     allowNewLoan = [
         AppConfig.GeneralStatuses.SETTLED,
@@ -38,6 +39,7 @@ export class HomePage {
             if(data){
                 this.loanStatusId = data.StatusId;
                 this.isMoneyDeposited = data.IsMoneyDeposited;
+                this.isShownToExternal = data.ShownToExternal;
                 if(this.userService.user.LoanStatusId != data.StatusId){
                     this.userService.updateAuthResponseStatus("LoanStatusId",data.StatusId);
                 }

@@ -16,7 +16,7 @@
   <h3 class="greeting-intro-text">{{ "WE_WILL_COLLECT_SIGNATURE" | translate }}</h3>
   <ion-list>
     <ion-item>
-      <ion-label stacked>When would you like for us to call you</ion-label>
+      <ion-label hidden stacked>When would you like for us to call you</ion-label>
       <ion-select interface="popover" [(ngModel)]="selectedValue">
         <ion-option *ngFor="let occasion of meetingOccasions" [value]="occasion.id">{{occasion.name}}</ion-option>
       </ion-select>

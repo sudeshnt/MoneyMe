@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mutants.moneyme" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Money-Me</name>
+<widget id="com.mutants.moneyme" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Money Me</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
@@ -78,7 +78,7 @@
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
     <universal-links>
-        <host name="moneyme.page.link/iov4" scheme="https" />
+        <host name="moneymeapp.page.link/nM9x" scheme="https" />
         <host name="money-me.firebaseapp.com" scheme="https">
             <path url="/__/auth/callback" />
         </host>
@@ -95,7 +95,7 @@
     <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
     <plugin name="cordova-plugin-customurlscheme" spec="^4.3.0">
-        <variable name="URL_SCHEME" value="com.mutants.moneymeiv4" />
+        <variable name="URL_SCHEME" value="com.mutants.moneyme" />
     </plugin>
     <plugin name="cordova-sqlite-storage" spec="^2.4.0" />
     <plugin name="cordova-plugin-badge" spec="^0.8.7" />

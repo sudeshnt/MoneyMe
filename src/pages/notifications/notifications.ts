@@ -22,6 +22,7 @@ export class NotificationsPage {
     pagination:any = {
         "pNo" : 1,
         "pSize" : Config.pageSize,
+        "sortCol" : 'id descending',
         "rowCountRequired" : true,
         "recordCount" : 0
     };

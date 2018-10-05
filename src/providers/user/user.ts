@@ -46,6 +46,7 @@ export class UserProvider {
           authResponse[statusKey] = status;
           this.user = authResponse;
           this.setLocalAuthResponse(authResponse);
+          return true;
         }else{
           return false;
         }
