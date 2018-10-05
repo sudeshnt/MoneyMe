@@ -17,7 +17,7 @@
     <ion-item detail-none  *ngFor="let loan of myLoans">
       <div class="accordian-wrap">
         <p (click)="expandItem(loan)" ion-item><ion-icon class="accordian-arrow" name="arrow-dropdown"></ion-icon>
-          {{ "LOAN" | translate }} {{loan.LoanNo}} (<span class="{{!loan.ShownToExternal && loan.StatusId==2 ? 'highlighter' : ''}} {{loan.StatusId==10 ? 'highlightReject' : ''}} {{loan.ShownToExternal && loan.StatusId==2 ? 'highlightApproved' : ''}}">{{loan.status}}</span>)
+          {{ "LOAN" | translate }} {{loan.LoanNo}} (<span class="{{!loan.ShownToExternal && loan.StatusId==2 ? 'highlighter' : ''}} {{loan.StatusId==10 ? 'highlightReject' : ''}} {{loan.ShownToExternal && loan.StatusId==2 ? 'highlightApproved' : ''}} {{loan.StatusId==14 ? 'highlightInprogress' : ''}}">{{loan.status}}</span>)
         </p>
         <expandable [expandHeight]="itemExpandHeight" [expanded]="loan.expanded">
           <div class="accordian-details">

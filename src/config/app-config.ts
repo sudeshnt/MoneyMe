@@ -8,6 +8,10 @@ export class AppConfig {
   public static API_URL = 'http://124.43.16.202:8990/api';
   public static NOTIFICATION_API_URL = 'http://124.43.16.202:8991/api';
 
+  // UAT
+  // public static API_URL = 'http://13.250.219.239:81/api';
+  // public static NOTIFICATION_API_URL = 'http://13.250.219.239:82/api';
+
   public static UserApplicationId = "MUTMLCLNTAPP";
 
   public static clientPrefix = "C";
