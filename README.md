@@ -8,6 +8,13 @@ common errors
     ionic cordova plugin add cordova-plugin-firebase
 
     https://stackoverflow.com/questions/47152282/gradle-could-not-find-method-google-for-arguments-on-repository-container?noredirect=1&lq=1
-    Find the file named: gradle-wrapper.properties, and change the distributionUrl value to: "https\://services.gradle.org/distributions/gradle-4.1-all.zip"
-   if error : Could not find method google() for arguments [] on repository container
-    goto platforms/android/build.gradle , remove google() from line number 25
+    if error : Could not find method google() for arguments [] on repository container
+    goto platforms/android/build.gradle ,
+    allprojects {
+        repositories {
+            jcenter()
+            maven {
+                url "https://maven.google.com"
+            }
+        }
+    }
